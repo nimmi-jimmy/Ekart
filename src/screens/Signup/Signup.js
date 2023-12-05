@@ -24,7 +24,6 @@ const Sign = () => {
           <PDiv>
           <Divp>
             <PhnText>Password</PhnText>
-            
             <PassDiv>
             <Input placeholder='Enter your password' 
             type={visible ? "text" : "password"}
