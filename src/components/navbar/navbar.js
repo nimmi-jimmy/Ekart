@@ -16,7 +16,7 @@
 
 import React from 'react';
 import { Nav, NavbarContainer, NavMenu, NavBtn, Logo } from './navbarelements';
-import { FaSearch } from "react-icons/fa";
+import { SearchOutlined } from "@ant-design/icons";
 import LogoSrc from '../../images/logo.png';
 
 const NavBar = () => {
@@ -32,7 +32,7 @@ const NavBar = () => {
           /> */}
             <NavbarContainer>
                 <NavMenu>Search</NavMenu>
-                <NavBtn><FaSearch/></NavBtn>
+                <NavBtn><SearchOutlined /></NavBtn>
             </NavbarContainer>
         </Nav>
     

@@ -31,7 +31,7 @@ export const NavbarContainer = styled.div`
     border-radius: 15px;
     width: 30%;
     align-items: center;
-    background-color: #fff;
+    background-color: #F2F2F2;
 
     @media screen and (max-width: 500px) {
         width: 60%
@@ -42,7 +42,7 @@ export const NavbarContainer = styled.div`
 export const NavMenu = styled.ul`
         display: flex;        
         font-family: "Poppins", sans-serif;   
-        color: #dddddd;   
+        color: #ABABAB;   
 `;
 
 export const NavItem = styled.li`
