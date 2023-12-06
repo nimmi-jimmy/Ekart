@@ -31,6 +31,7 @@ export const Text = styled.div`
     font-family: "Poppins", sans-serif;   
     font-weight: bold;
     padding-block: 10px;
+  
 `
 export const Div = styled.div`
     display: flex;
@@ -40,12 +41,77 @@ export const DivRow = styled.div`
     display: flex;
     flex-direction: row;
 `
+export const DivRows = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding-right: 50px;
+`
 export const Row = styled.div`
     padding: 6px;
 `
-
 export const AccDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+`
+export const ImgMain = styled.img`
+    width: 100%;
+    // height: 50%;
+`
+export const MainDet= styled.div`
+    display: flex;
+    flex-direction: row;
+    padding: 50px 50px 50px 50px;
+`;
+
+export const Det= styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px 50px 50px;
+`;
+
+export const MainText = styled.div`
+    color: #000;
+    font-family: "Poppins", sans-serif;   
+    font-weight: bold;
+    padding-block: 10px;
+    font-size: 24px;
+    padding-right: 30px;
+`
+export const SubDetText = styled.div`
+    color: #000;
+    font-family: "Poppins", sans-serif;   
+    padding-block: 10px;
+    max-width: 80%;
+`
+export const Rows = styled.div`
+    padding-Block: 6px;
+    padding-right: 6px;
+`
+export const SubText = styled.div`
+    color: #000;
+    font-family: "Poppins", sans-serif;   
+    padding-block: 10px;
+`
+export const DivViewRow = styled.div`
+    display: flex;
+    flex-direction: row;
+    // padding: 50px 50px 50px 50px;
+`
+export const BtnMain = styled.div`
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    z-index: 1;
+    border-radius: 5px;
+    width: 30%;
+    align-items: center;
+    background-color: #000;
+    margin: 20px 0px 20px 0px;
+`;
+
+export const BtnText = styled.div`
+    color: #fff;
+    font-family: "Poppins", sans-serif;   
+    font-weight: bold;
 `
