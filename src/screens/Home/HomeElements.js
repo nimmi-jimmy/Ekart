@@ -18,6 +18,11 @@ display: flex;
 object-fit: cover;
 `;
 
+export const ProImg = styled.img`
+display: flex;
+object-fit: cover;
+`;
+
 export const SubImg = styled.img`
 display: flex;
 width: 30px;

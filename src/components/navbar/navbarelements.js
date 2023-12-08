@@ -11,7 +11,7 @@ export const Nav = styled.nav`
     height: 4rem;
     padding-inline: 50px;
     align-items: center;
-    border-bottom: 1px solid #fff;
+    // border-bottom: 1px solid #fff;
     background: #000;
 
     @media screen and (max-width: 400px) {
@@ -23,7 +23,7 @@ export const Nav = styled.nav`
     // }
 `;
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled.input`
     display: flex;
     justify-content: space-between;
     height: 2.5rem;
@@ -32,6 +32,8 @@ export const NavbarContainer = styled.div`
     width: 30%;
     align-items: center;
     background-color: #F2F2F2;
+    padding-inline: 20px;
+    font-size: 14px;
 
     @media screen and (max-width: 500px) {
         width: 60%
@@ -39,7 +41,7 @@ export const NavbarContainer = styled.div`
 
     `;
 
-export const NavMenu = styled.ul`
+export const NavMenu = styled.div`
         display: flex;        
         font-family: "Poppins", sans-serif;   
         color: #ABABAB;   

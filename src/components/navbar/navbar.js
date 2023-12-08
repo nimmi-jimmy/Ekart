@@ -24,16 +24,12 @@ const NavBar = () => {
     
         <Nav>
           <Logo src={LogoSrc}/>
-          {/* <img
-            src={"../../images/logo.png"}
-            style={{ width: 50, height: 50 }}
         
-            // resizeMode="cover"
-          /> */}
-            <NavbarContainer>
-                <NavMenu>Search</NavMenu>
-                <NavBtn><SearchOutlined /></NavBtn>
-            </NavbarContainer>
+            {/* <NavbarContainer placeholder='Search'> */}
+                {/* <NavMenu>Search</NavMenu>*/}
+                {/* <NavBtn><SearchOutlined /></NavBtn>  */}
+            {/* </NavbarContainer> */}
+            
         </Nav>
     
   );

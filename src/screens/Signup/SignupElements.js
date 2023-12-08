@@ -125,3 +125,14 @@ export const Divc = styled.div`
 export const Logo = styled.img`
     padding: 20px;
 `;
+
+export const Drop = styled.div`
+    // text-align: center;
+    border: 1px solid #949CA9;
+    font-family: "Poppins", sans-serif;   
+    padding: 10px;
+    border-radius: 5px;
+    color: #949CA9;
+    width: 95%;
+    font-size: 14px; 
+`
