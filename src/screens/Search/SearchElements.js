@@ -30,7 +30,7 @@ position: absolute;
     width: 30%;
     align-items: center;
     background-color: #282828;
-    // background: transparent;
+    color: #fff;
     padding-inline: 20px;
     font-size: 14px;
 

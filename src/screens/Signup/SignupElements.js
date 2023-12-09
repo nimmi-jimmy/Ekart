@@ -36,7 +36,7 @@ export const PhnText = styled.div`
     color: #000;
     font-family: "Poppins", sans-serif; 
     font-size: 14px;  
-    padding: 20px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
 `
 export const Div = styled.div`
 // display: grid;

@@ -13,10 +13,29 @@ const Sign = () => {
   const [cvisible, setCvisible] = useState("");
 
   const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(!open);
   };
+
+  const handleMenuOne = () => {
+    // do something
+    setOpen(false);
+    setValue("Customer");
+  };
+
+  const handleMenuTwo = () => {
+    // do something
+    setOpen(false);
+    setValue("Photograper");
+  };
+
+  const [file, setFile] = useState();
+  function handleChange(e) {
+      console.log(e.target.files);
+      setFile(URL.createObjectURL(e.target.files[0]));
+  }
 
   return (
     <Main>
@@ -26,14 +45,16 @@ const Sign = () => {
           <PhnText>Your name</PhnText>
           <Input placeholder='Enter your name'></Input>
           <PhnText>User type</PhnText>
-          <Input onClick={handleOpen} placeholder='Select user type'></Input>
+          <Input onClick={handleOpen} placeholder={value ? value : 'Select user type'}></Input>
           {open ? (
             <Drop>
-              <PhnText>Customer</PhnText>
-              <PhnText>photograper</PhnText>
+              <PhnText onClick={handleMenuOne}>Customer</PhnText>
+              <PhnText onClick={handleMenuTwo}>photograper</PhnText>
             </Drop>
           ) : null}
-          {/* {open ? <div>Is Open</div> : <div>Is Closed</div>} */}
+          <PhnText>Profile picture</PhnText>
+          <Input type="file" onChange={handleChange} />
+            <img src={file} />
           <PhnText>E-mail or phone number</PhnText>
           <Input placeholder='Enter your E-mail or phone number'></Input>
           <PDiv>

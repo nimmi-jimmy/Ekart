@@ -13,9 +13,9 @@ function App() {
       <Router>
           <Home/>
           {/* <Signin/> */}
-          <Signup/>
+          {/* <Signup/> */}
           {/* <Forgot/> */}
-          {/* <MainHome /> */}
+          <MainHome />
           {/* <Search /> */}
       </Router>
     </div>
