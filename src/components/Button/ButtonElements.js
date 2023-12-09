@@ -16,4 +16,5 @@ export const BtnText = styled.div`
     color: #fff;
     font-family: "Poppins", sans-serif;   
     font-weight: bold;
+    padding-inline: 20px;
 `

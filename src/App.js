@@ -5,6 +5,7 @@ import Signin from './screens/Signin/Signin';
 import Signup from './screens/Signup/Signup';
 import Forgot from './screens/Forgot/Forgot';
 import MainHome from './screens/Home/Home';
+import Profile from './screens/Profile/Profile';
 import Search from './screens/Search/Search';
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
           {/* <Signin/> */}
           {/* <Signup/> */}
           {/* <Forgot/> */}
-          <MainHome />
+          {/* <MainHome /> */}
           {/* <Search /> */}
+          <Profile/>
       </Router>
     </div>
   );

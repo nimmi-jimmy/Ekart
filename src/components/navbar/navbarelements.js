@@ -62,6 +62,12 @@ export const Logo = styled.img`
     // height: 50px;
 `;
 
+export const Arr = styled.img`
+    width: 15px;
+    height: 10px;
+    margin: 20%
+`;
+
 export const NavLinks = styled.div`
         color: #fff;
         display: flex;
@@ -76,21 +82,12 @@ export const NavLinks = styled.div`
     
 export const NavBtn = styled.nav`
         display: flex;
-        padding: 0px 35px;
-        
+        height: 30px;
+        width: 30px;
+        border-radius: 20px;
 `;
 
-export const NavBtnLink = styled(LinkR)`
-        border-radius: 50px;
-        background: #01bf71;
-        white-space: nowrap;
-        padding: 10px 22px;
-        color: #010606;
-        font-size: 16px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        text-decoration: none;
-
+export const NavBtnLink = styled.div`
+display: flex;
+flex-direction: row;
 `;

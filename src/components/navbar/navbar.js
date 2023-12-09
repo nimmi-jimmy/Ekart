@@ -15,9 +15,11 @@
 // export default Navbar;
 
 import React from 'react';
-import { Nav, NavbarContainer, NavMenu, NavBtn, Logo } from './navbarelements';
-import { SearchOutlined } from "@ant-design/icons";
+import { Nav, Arr, NavBtn, Logo, NavBtnLink } from './navbarelements';
+import { CaretDownOutlined, SearchOutlined } from "@ant-design/icons";
 import LogoSrc from '../../images/logo.png';
+import Profile from '../../images/Ellipse.png';
+import Arrow from '../../images/Vector.png';
 
 const NavBar = () => {
   return (
@@ -25,11 +27,12 @@ const NavBar = () => {
         <Nav>
           <Logo src={LogoSrc}/>
         
-            {/* <NavbarContainer placeholder='Search'> */}
-                {/* <NavMenu>Search</NavMenu>*/}
-                {/* <NavBtn><SearchOutlined /></NavBtn>  */}
-            {/* </NavbarContainer> */}
-            
+              <NavBtnLink>
+              <NavBtn>
+                 <Logo src={Profile}/>
+              </NavBtn>  
+              <Arr src={Arrow}/>
+              </NavBtnLink>
         </Nav>
     
   );
