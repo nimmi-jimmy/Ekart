@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Main, Img, Profilepic, ProfileDiv, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
+import { Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -12,130 +12,122 @@ import Group6 from '../../images/Group6.png';
 import Group7 from '../../images/Group7.png';
 import Profile from '../../images/Ellipse3.png';
 import Msgimg from '../../images/msg.png';
-
+import Home from '../../screens/Home/Home';
 
 import { HeartOutlined, HeartFilled, EyeOutlined } from '@ant-design/icons';
 
-const Home = () => {
+const Profiles = () => {
     const images = [
           {
             slno: 1,
             src: ImgSrc, 
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'
+            sub: '12$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
           },
           {
             slno: 2,
             src: Group1,
             subsrc: SubSrc,   
             title: 'Lorem Ipsum',
-            sub: '12K'       
+            sub: '60$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+       
           },
           {
             slno: 3,
             src: Group2,  
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'        
+            sub: '40$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        
           },
           {
             slno: 4,
             src: Group3,   
             subsrc: SubSrc,  
             title: 'Lorem Ipsum',
-            sub: '12K'     
+            sub: '51$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+     
           },
           {
             slno: 5,
             src: Group4,  
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'        
+            sub: '30$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        
           },
           {
             slno: 5,
             src: Group5,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'          
+            sub: '60$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+         
           },
           {
             slno: 6,
             src: Group6,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'          
+            sub: '10$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          
           },
           {
             src: Group7,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'         
+            sub: '60$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+         
           },
           {
             src: ImgSrc,
             subsrc: SubSrc, 
             title: 'Lorem Ipsum',
-            sub: '12K'         
+            sub: '60$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+         
           },
           {
             src: ImgSrc, 
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'         
+            sub: '60$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+         
           },
           {
             src: ImgSrc,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'          
+            sub: '60$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          
           },
           {
             src: ImgSrc, 
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
-            sub: '12K'         
+            sub: '60$',
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+         
           },
     ]
 
     const [visible, setVisible] = useState("");
 
+
   return (
     <>
-    {/* <Div>
-      <ProImg src={SubSrc} />
-    </Div> */}
-    {/* <MainDet>
-        <ImgMain src={ImgSrc} />
-        
-        <Det>
-            <MainText>The Mud Cave</MainText>           
-        
-        <DivRow>
-            <SubImg src={SubSrc} />
-            <SubDetText>Anil James</SubDetText>
-        </DivRow>
-        <SubDetText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</SubDetText>
-        <DivViewRow>
-            <DivRows>
-            <Rows><EyeOutlined /></Rows>
-            <SubText>67.3K Views</SubText>
-            </DivRows> 
-            <DivRow onClick={() => setVisible(!visible)}>
-                  <Rows>{ visible ? <HeartFilled /> : <HeartOutlined /> }</Rows>
-              <SubText>12K</SubText>
-            </DivRow> 
-        </DivViewRow>
-        <DivViewRow>
-          <MainText>Price</MainText>
-          <MainText>$63</MainText>
-        </DivViewRow>
-        <BtnMain>
-            <BtnText>Buy</BtnText>
-        </BtnMain>
-        </Det>   
-    </MainDet> */}
+    
     <DivRow>
         <ProfileDiv>
             <Profilepic src={Profile}></Profilepic>
@@ -148,7 +140,7 @@ const Home = () => {
             </AccDiv>  
             <About>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </About>
             <div>  
-            <Button title='Works gallery'/>
+            <Button title='Works gallery' onClick='/Profile'/>
             <Button title='Book an appointment'/>
             </div>  
             
@@ -158,17 +150,28 @@ const Home = () => {
             
             {
                 images.map((image, index) => (
-                <Div>
-                <Img src={image.src} key={index} />
+                <Div>                 
+                <Img src={image.src} key={index}/>
                 <AccDiv>
                 <DivRow>
                 <Text>{image.title}</Text>
                 </DivRow>
+                <DivRow>
+                <Text>{image.sub}</Text>
                 <DivRow onClick={() => setVisible(!visible)}>
                 <Row>{ visible ? <HeartFilled /> : <HeartOutlined /> }</Row>  
                 </DivRow>
+                </DivRow>
+               
                 </AccDiv>
-                </Div>       
+                <About>
+                    {image.about}
+                </About>
+                <BtnOver>
+                    <Text>Buy</Text>
+                </BtnOver>
+                </Div>  
+                   
             ))}
             
         </Main>
@@ -177,4 +180,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Profiles;

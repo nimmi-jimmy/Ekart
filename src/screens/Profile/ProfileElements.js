@@ -20,6 +20,7 @@ export const Img = styled.img`
 display: flex;
 object-fit: cover;
 width: 300px;
+
 @media screen and (max-width: 1400px) {
         width: 250px;
     }
@@ -175,4 +176,20 @@ export const BtnText = styled.div`
     font-family: "Poppins", sans-serif;   
     font-weight: bold;
 `
+export const BtnOver = styled.div`
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    z-index: 1;
+    border-radius: 5px;
+    // width: 30%;
+    align-items: center;
+    border: 1px solid #000;
+    margin: 20px 0px 20px 0px;
+`
+
 
