@@ -38,13 +38,16 @@ export const NavbarContainer = styled.input`
     @media screen and (max-width: 500px) {
         width: 60%
     }
-
     `;
+
+    
 
 export const NavMenu = styled.div`
         display: flex;        
         font-family: "Poppins", sans-serif;   
-        color: #ABABAB;   
+        color: #fff;   
+            align-items: center;
+    padding-inline: 10px;
 `;
 
 export const NavItem = styled.li`
@@ -65,9 +68,30 @@ export const Logo = styled.img`
 export const Arr = styled.img`
     width: 15px;
     height: 10px;
-    margin: 20%
+        margin-block: 20%;
+    padding-inline: 5px;
 `;
 
+export const Drop = styled.div`
+    // text-align: center;
+    border: 1px solid #949CA9;
+    font-family: "Poppins", sans-serif;   
+    padding: 10px;
+    border-radius: 4px;
+    color: #949CA9;
+    // width: 95%;
+    font-size: 14px; 
+    background-color: #fff;
+    position: absolute;
+    top: 70%;
+    right: 0;
+`
+export const PhnText = styled.div`
+    color: #000;
+    font-family: "Poppins", sans-serif; 
+    font-size: 14px;  
+    padding: 10px 0px 10px 0px;
+`
 export const NavLinks = styled.div`
         color: #fff;
         display: flex;
@@ -79,12 +103,13 @@ export const NavLinks = styled.div`
         
 
 `;
-    
+
 export const NavBtn = styled.nav`
         display: flex;
         height: 30px;
         width: 30px;
         border-radius: 20px;
+            padding-top: 15px;
 `;
 
 export const NavBtnLink = styled.div`
