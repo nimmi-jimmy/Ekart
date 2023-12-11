@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
+import {Close, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -12,9 +12,12 @@ import Group6 from '../../images/Group6.png';
 import Group7 from '../../images/Group7.png';
 import Profile from '../../images/Ellipse3.png';
 import Msgimg from '../../images/msg.png';
+import Booking from '../../images/booking.png';
 import Home from '../../screens/Home/Home';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-import { HeartOutlined, HeartFilled, EyeOutlined } from '@ant-design/icons';
+import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined } from '@ant-design/icons';
 
 const Profiles = () => {
     const images = [
@@ -121,15 +124,22 @@ const Profiles = () => {
          
           },
     ]
-
+    const [startDate, setStartDate] = useState(new Date());
     const [visible, setVisible] = useState("");
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
+    const handleShow = () => {
+      setShow(!show);
+    };
 
   return (
     <>
-    
+
     <DivRow>
         <ProfileDiv>
+          
             <Profilepic src={Profile}></Profilepic>
             
             <AccDiv>
@@ -141,10 +151,49 @@ const Profiles = () => {
             <About>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </About>
             <div>  
             <Button title='Works gallery' onClick='/Profile'/>
-            <Button title='Book an appointment'/>
+            <Button title='Book an appointment' onClick={handleShow}/>
             </div>  
             
         </ProfileDiv>
+
+        {show ? (
+        <Modal>
+
+          <Content>
+              <MImg src={Booking} />
+              <ModalDiv>
+                <Close>
+                  <CloseOutlined />
+                </Close>
+                <MainText>Book an Appointment</MainText>
+                <Div>
+                    <PhnText>Email Id</PhnText>
+                    <Input placeholder='Enter email here' ></Input>
+                    
+                    <PhnText>Address</PhnText>
+                    <Input placeholder='Enter your address here' ></Input>
+                    
+                    <PhnText>Phone number</PhnText>
+                    <Input placeholder='Enter your phone number here' ></Input>
+
+                    <PhnText>Select date and time for booking appointment</PhnText>
+                    <DatePicker
+                      selected={startDate}
+                      onChange={date => setStartDate(date)}
+                      showTimeSelect
+                      timeFormat="HH:mm"
+                      timeIntervals={15}
+                      timeCaption="time"
+                      dateFormat="MMMM d, yyyy h:mm aa"
+                    />
+                   
+                </Div>
+              </ModalDiv>
+          </Content>
+
+        </Modal>
+        ) : null
+        }
         
         <Main> 
             

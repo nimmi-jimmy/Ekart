@@ -1,10 +1,10 @@
 import React from 'react';
 import { Main, BtnText } from './ButtonElements';
 
-const Button = ({title}) => {
+const Button = ({title, onClick}) => {
   return (
     <Main>
-        <BtnText>{title}</BtnText>
+        <BtnText onClick={onClick}>{title}</BtnText>
     </Main>
   );
 };

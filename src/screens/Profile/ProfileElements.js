@@ -16,6 +16,32 @@ export const Main = styled.div`
     
 `;
 
+export const Modal = styled.div`
+    // display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+`
+export const Close = styled.div`
+    right: 22%;
+    position: absolute;
+`
+export const Content = styled.div`
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    // border-radius: 20px;
+`
 export const Img = styled.img`
 display: flex;
 object-fit: cover;
@@ -26,6 +52,19 @@ width: 300px;
     }
     @media screen and (max-width: 800px) {
         width: 200px;
+    }
+`;
+
+export const MImg = styled.img`
+display: flex;
+object-fit: cover;
+width: 300px;
+
+@media screen and (max-width: 1400px) {
+        width: 250px;
+    }
+    @media screen and (max-width: 800px) {
+        display: none;
     }
 `;
 
@@ -80,6 +119,29 @@ export const About = styled.div`
 export const Div = styled.div`
     display: flex;
     flex-direction: column;
+`
+
+export const Input = styled.input`
+    // text-align: center;
+    border: 1px solid #949CA9;
+    font-family: "Poppins", sans-serif;   
+    padding: 10px;
+    border-radius: 5px;
+    color: #949CA9;
+    width: 95%;
+    font-size: 14px; 
+`
+export const PhnText = styled.div`
+    color: #000;
+    font-family: "Poppins", sans-serif; 
+    // font-size: 14px;  
+    padding: 20px 0px 10px 0px;
+`
+export const ModalDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
 `
 export const ProfileDiv = styled.div`
     display: flex;
@@ -184,7 +246,6 @@ export const BtnOver = styled.div`
     display: flex;
     justify-content: center;
     height: 3rem;
-    z-index: 1;
     border-radius: 5px;
     // width: 30%;
     align-items: center;
