@@ -20,7 +20,7 @@ export const Modal = styled.div`
     // display: none; 
     position: fixed; 
     z-index: 1; 
-    padding-top: 100px; 
+    padding-top: 50px; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -41,6 +41,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: row;
     // border-radius: 20px;
+    
 `
 export const Img = styled.img`
 display: flex;
@@ -120,8 +121,40 @@ export const Div = styled.div`
     display: flex;
     flex-direction: column;
 `
+export const MainTime = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+
+    @media screen and (max-width: 1400px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+`
+
+export const BtnTime = styled.div`
+display: flex;
+justify-content: center;
+height: 3rem;
+border-radius: 5px;
+align-items: center;
+border: 1px solid #dddddd;
+margin: 0px 0px 20px 0px;
+`
 
 export const Input = styled.input`
+    // text-align: center;
+    border: 1px solid #949CA9;
+    font-family: "Poppins", sans-serif;   
+    padding: 10px;
+    border-radius: 5px;
+    color: #949CA9;
+    width: 95%;
+    font-size: 14px; 
+`
+export const DInput = styled.div`
     // text-align: center;
     border: 1px solid #949CA9;
     font-family: "Poppins", sans-serif;   
@@ -142,6 +175,9 @@ export const ModalDiv = styled.div`
     flex-direction: column;
     padding: 20px;
     width: 50%;
+    @media screen and (max-width: 800px) {
+    width: 90%;
+    }
 `
 export const ProfileDiv = styled.div`
     display: flex;

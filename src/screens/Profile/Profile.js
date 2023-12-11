@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Close, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
+import {Close, DInput, BtnTime, MainTime, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -23,6 +23,7 @@ const Profiles = () => {
     const images = [
           {
             slno: 1,
+            time: '08:00-10:00AM',
             src: ImgSrc, 
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
@@ -31,6 +32,7 @@ const Profiles = () => {
           },
           {
             slno: 2,
+            time: '10:00-12:00PM',
             src: Group1,
             subsrc: SubSrc,   
             title: 'Lorem Ipsum',
@@ -40,6 +42,7 @@ const Profiles = () => {
           },
           {
             slno: 3,
+            time: '12:00-02:00PM',
             src: Group2,  
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
@@ -49,6 +52,7 @@ const Profiles = () => {
           },
           {
             slno: 4,
+            time: '02:00-04:00PM',
             src: Group3,   
             subsrc: SubSrc,  
             title: 'Lorem Ipsum',
@@ -58,6 +62,7 @@ const Profiles = () => {
           },
           {
             slno: 5,
+            time: '04:00-06:00PM',
             src: Group4,  
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
@@ -67,6 +72,7 @@ const Profiles = () => {
           },
           {
             slno: 5,
+            time: '06:00-08:00PM',
             src: Group5,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
@@ -76,6 +82,7 @@ const Profiles = () => {
           },
           {
             slno: 6,
+            time: '08:00-10:00PM',
             src: Group6,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
@@ -84,45 +91,46 @@ const Profiles = () => {
           
           },
           {
+            slno: 6,
+            time: '10:00-12:00AM',
             src: Group7,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
             sub: '60$',
             about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
           },
-          {
-            src: ImgSrc,
-            subsrc: SubSrc, 
-            title: 'Lorem Ipsum',
-            sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          // {
+          //   src: ImgSrc,
+          //   subsrc: SubSrc, 
+          //   title: 'Lorem Ipsum',
+          //   sub: '60$',
+          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
          
-          },
-          {
-            src: ImgSrc, 
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          // },
+          // {
+          //   src: ImgSrc, 
+          //   subsrc: SubSrc,
+          //   title: 'Lorem Ipsum',
+          //   sub: '60$',
+          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
          
-          },
-          {
-            src: ImgSrc,
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          // },
+          // {
+          //   src: ImgSrc,
+          //   subsrc: SubSrc,
+          //   title: 'Lorem Ipsum',
+          //   sub: '60$',
+          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
           
-          },
-          {
-            src: ImgSrc, 
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+          // },
+          // {
+          //   src: ImgSrc, 
+          //   subsrc: SubSrc,
+          //   title: 'Lorem Ipsum',
+          //   sub: '60$',
+          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
          
-          },
+          // },
     ]
     const [startDate, setStartDate] = useState(new Date());
     const [visible, setVisible] = useState("");
@@ -162,33 +170,52 @@ const Profiles = () => {
           <Content>
               <MImg src={Booking} />
               <ModalDiv>
-                <Close>
+                <Close onClick={handleClose}>
                   <CloseOutlined />
                 </Close>
                 <MainText>Book an Appointment</MainText>
                 <Div>
-                    <PhnText>Email Id</PhnText>
+                    <PhnText style={{fontWeight: 'bold'}}>Email Id</PhnText>
                     <Input placeholder='Enter email here' ></Input>
                     
-                    <PhnText>Address</PhnText>
+                    <PhnText style={{fontWeight: 'bold'}}>Address</PhnText>
                     <Input placeholder='Enter your address here' ></Input>
                     
-                    <PhnText>Phone number</PhnText>
+                    <PhnText style={{fontWeight: 'bold'}}>Phone number</PhnText>
                     <Input placeholder='Enter your phone number here' ></Input>
 
-                    <PhnText>Select date and time for booking appointment</PhnText>
+                    <PhnText style={{fontWeight: 'bold'}}>Select a day for booking appointment</PhnText>
+                    <DInput>
                     <DatePicker
+                      
                       selected={startDate}
                       onChange={date => setStartDate(date)}
-                      showTimeSelect
-                      timeFormat="HH:mm"
-                      timeIntervals={15}
-                      timeCaption="time"
-                      dateFormat="MMMM d, yyyy h:mm aa"
+                      // showTimeSelect
+                      // timeFormat="HH:mm"
+                      // timeIntervals={15}
+                      // timeCaption="time"
+                      dateFormat="MMMM d, yyyy"
                     />
-                   
+                    </DInput>
+                    <DivRows>
+                      <PhnText style={{fontWeight: 'bold'}}>Select time &nbsp;</PhnText>
+                      <PhnText>(Non available time slots are disabled)</PhnText>
+                    </DivRows>
+
+                    <MainTime>
+                    {images.map((image, index) => (
+                   <BtnTime>
+                        <PhnText>{image.time}</PhnText>
+                    </BtnTime>
+                    ))}
+                    </MainTime>
+                      <div style={{marginBottom: '2rem'}}>
+                      <Button title='Book now' />
+                      </div>
+                    
                 </Div>
-              </ModalDiv>
+                
+              </ModalDiv>              
           </Content>
 
         </Modal>
