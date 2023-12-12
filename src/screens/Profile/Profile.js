@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Close, DInput, BtnTime, MainTime, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
+import {Close, Contentss, Closes, Drop, DInput, BtnTime, Contents, MainTime, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -142,6 +142,49 @@ const Profiles = () => {
       setShow(!show);
     };
 
+    const [open, setOpen] = React.useState(false);
+    const [value, setValue] = React.useState(false);
+    const [opens, setOpens] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+  const handleMenuOne = () => {
+    setOpen(false);
+    setValue("Portrait");
+  };
+  const handleMenuTwo = () => {
+    setOpen(false);
+    setValue("Family");
+  };
+  const handleMenuThree = () => {
+    setOpen(false);
+    setValue("Graduation");
+  };
+  const handleMenuFour = () => {
+    setOpen(false);
+    setValue("Party");
+  };
+  const handleMenuFive = () => {
+    setOpen(false);
+    setValue("Wedding");
+  };
+  const handleMenuSix = () => {
+    setOpen(false);
+    setValue("Engagement");
+  };
+  const handleMenuSeven = () => {
+    setOpen(false);
+    setValue("Dating");
+  };
+  const handleMenuEight = () => {
+    setOpen(false);
+    setValue("Maternity");
+  };
+  const alertbox = () => {
+    setOpens(!opens);
+  }
+
   return (
     <>
 
@@ -184,10 +227,12 @@ const Profiles = () => {
                     <PhnText style={{fontWeight: 'bold'}}>Phone number</PhnText>
                     <Input placeholder='Enter your phone number here' ></Input>
 
+                    <PhnText style={{fontWeight: 'bold'}}>Postcode</PhnText>
+                    <Input placeholder='Enter your postcode here' ></Input>
+
                     <PhnText style={{fontWeight: 'bold'}}>Select a day for booking appointment</PhnText>
                     <DInput>
-                    <DatePicker
-                      
+                    <DatePicker  
                       selected={startDate}
                       onChange={date => setStartDate(date)}
                       // showTimeSelect
@@ -204,15 +249,43 @@ const Profiles = () => {
 
                     <MainTime>
                     {images.map((image, index) => (
-                   <BtnTime>
+                    <BtnTime>
                         <PhnText>{image.time}</PhnText>
                     </BtnTime>
                     ))}
                     </MainTime>
+
+                    <PhnText style={{fontWeight: 'bold'}}>What do you need to shoot?</PhnText>
+                    <Input onClick={handleOpen} placeholder={value ? value : 'Select'}></Input>
+                      {open ? (
+                        <Drop>
+                          <PhnText onClick={handleMenuOne}>Portrait</PhnText>
+                          <PhnText onClick={handleMenuTwo}>Family</PhnText>
+                          <PhnText onClick={handleMenuThree}>Graduation</PhnText>
+                          <PhnText onClick={handleMenuFour}>Party</PhnText>
+                          <PhnText onClick={handleMenuFive}>Wedding</PhnText>
+                          <PhnText onClick={handleMenuSix}>Engagement</PhnText>
+                          <PhnText onClick={handleMenuSeven}>Dating</PhnText>
+                          <PhnText onClick={handleMenuEight}>Maternity</PhnText>
+
+                        </Drop>
+                      ) : null}
+
                       <div style={{marginBottom: '2rem'}}>
-                      <Button title='Book now' />
+                      <Button title='Book now' onClick={alertbox}/>
                       </div>
-                    
+
+                      {opens ? (
+                        <Modal>
+                          <Contentss>
+                          <Closes onClick={handleClose}>
+                            <CloseOutlined />
+                          </Closes>
+                            <PhnText>You will get a notification after confired!</PhnText>
+                          </Contentss>
+                        </Modal>
+                      ): null}
+                      
                 </Div>
                 
               </ModalDiv>              

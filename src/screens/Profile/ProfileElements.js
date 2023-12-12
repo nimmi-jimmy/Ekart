@@ -29,9 +29,20 @@ export const Modal = styled.div`
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
 `
-export const Close = styled.div`
-    right: 22%;
+export const Closes = styled.div`
+    right: 40%;
     position: absolute;
+    font-size: 12px;
+
+    @media screen and (max-width: 800px){
+        right: 25%;
+    }
+`
+
+export const Close = styled.div`
+    right: 40%;
+    position: absolute;
+
 `
 export const Content = styled.div`
     background-color: #fefefe;
@@ -43,6 +54,20 @@ export const Content = styled.div`
     // border-radius: 20px;
     
 `
+export const Contentss = styled.div`
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 20%;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 800px) {
+        width: 50%;
+    }
+`
+
 export const Img = styled.img`
 display: flex;
 object-fit: cover;
@@ -143,7 +168,16 @@ align-items: center;
 border: 1px solid #dddddd;
 margin: 0px 0px 20px 0px;
 `
-
+export const Drop = styled.div`
+    // text-align: center;
+    border: 1px solid #949CA9;
+    font-family: "Poppins", sans-serif;   
+    padding: 10px;
+    border-radius: 5px;
+    color: #949CA9;
+    width: 95%;
+    font-size: 14px; 
+`
 export const Input = styled.input`
     // text-align: center;
     border: 1px solid #949CA9;
