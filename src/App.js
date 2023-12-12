@@ -7,6 +7,7 @@ import Forgot from './screens/Forgot/Forgot';
 import Works from './screens/Home/Home';
 import Profile from './screens/Profile/Profile';
 import Search from './screens/Search/Search';
+import Message from './screens/Message/Message';
 
 function App() {
 
@@ -29,7 +30,8 @@ function App() {
           <Forgot/>
           <Works />
           <Search /> */}
-          <Profile/>
+          {/* <Profile/> */}
+          <Message />
       </Router>
         {/* <Router>
           <Homes />
