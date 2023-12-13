@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Main = styled.div`
-    // display: flex;
+    height: 550px;
     justify-content: center;
     z-index: 1;
     margin: auto;
@@ -35,25 +35,47 @@ export const SubText = styled.div`
     font-size: 14px; 
     text-align: center;
 `
-export const PhnText = styled.div`
+export const SendText = styled.div`
     color: #000;
     font-family: "Poppins", sans-serif; 
     font-size: 14px;  
-    padding: 20px 0px 10px 0px;
+    cursor: pointer;
+    max-width: 200px;
 `
+export const ReceiveText = styled.div`
+    color: #fff;
+    font-family: "Poppins", sans-serif; 
+    font-size: 14px;  
+    cursor: pointer;
+    max-width: 200px;
+`
+
 export const Div = styled.div`
-display: flex;
-flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 2rem;
 `
 export const Input = styled.input`
     border: none;
     background-color: #F0F4F8;
     font-family: "Poppins", sans-serif;   
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #829AB1;
     font-size: 14px; 
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-height: 460px;
+    overflow-y: scroll;
+`
+export const MessageDiv = styled.div`  
+    display: flex;
+    flex-direction: column; 
 `
 export const PText = styled.div`
     color: #2F93F6;
@@ -64,25 +86,52 @@ export const PText = styled.div`
 export const BtnMain = styled.div`
     display: flex;
     justify-content: center;
-    height: 30px;
+    height: 40px;
     z-index: 1;
-    border-radius: 20px;
-    width: 30px;
+    border-radius: 30px;
+    width: 40px;
     align-items: center;
     background-color: #F0F4F8;
-    margin: 20px 0px 20px 0px;
+    margin-inline: 20px;
     border: 1px solid #829AB1;
 `;
 
 export const BtnText = styled.div`
     color: #000;
     font-family: "Poppins", sans-serif;   
-   
 `
-export const AccDiv = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+export const SendDiv = styled.div`
+background-color: #D9E2EC;
+padding: 10px;
+border-radius: 5px;
+text-align: right;
+float: right;
+borderTopRightRadius: 5;
+paddingHorizontal: 12;
+max-width: fit-content;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+justify-content: end;
+margin-left: auto; 
+margin-right: 0;
+`
+
+export const ReceiveDiv = styled.div`
+background-color: #2186EB;
+
+padding: 10px;
+border-radius: 5px;
+text-align: left;
+float: left;
+borderTopRightRadius: 5;
+paddingHorizontal: 12;
+max-width: fit-content;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+justify-content: end;
+// min-width: 50px;
 `
 export const AccText = styled.div`
     color: #000;
