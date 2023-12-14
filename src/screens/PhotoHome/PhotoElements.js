@@ -74,6 +74,7 @@ object-fit: cover;
 width: 300px;
 height: 200px;
 border-radius: 20px;
+
 @media screen and (max-width: 1400px) {
         width: 250px;
     }

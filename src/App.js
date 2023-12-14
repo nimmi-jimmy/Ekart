@@ -8,10 +8,12 @@ import Works from './screens/Home/Home';
 import Profile from './screens/Profile/Profile';
 import Search from './screens/Search/Search';
 import Message from './screens/Message/Message';
+import PhotoHome from './screens/PhotoHome/Photo';
+import Work from './screens/Work/Work';
 
 function App() {
 
-  const Homes = () => {
+  const Customer = () => {
     <Routes>
       <Route path="/Home" element={<Home />} />
       <Route path="/Signin" element={<Signin />} />
@@ -31,10 +33,12 @@ function App() {
           <Works />
           <Search /> */}
           {/* <Profile/> */}
-          <Message />
+          {/* <Message /> */}
+          <PhotoHome />
+          {/* <Work /> */}
       </Router>
         {/* <Router>
-          <Homes />
+          <Customer />
         </Router> */}
     </div>
 

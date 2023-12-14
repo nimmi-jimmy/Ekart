@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Logo, MessageDiv, ReceiveText, SendText, Main, Text, SubText, ReceiveDiv, SendDiv, PhnText, Div, Input, PText, BtnMain, BtnText, AccText, Signup, AccDiv } from './MessageElements';
+import { Logo, MessageDiv, BtnMain, ReceiveText, SendText, Main, ReceiveDiv, SendDiv, Div, Input, BtnMain1, BtnMain2 } from './MessageElements';
 import Button from '../../components/Button/Button';
 import LogoSrc from '../../images/google.png';
 import SubSrc from '../../images/Ellipse.png';
+import SubSrc2 from '../../images/Ellipse3.png';
+
 
 import { EyeOutlined, EyeInvisibleOutlined, SendOutlined } from '@ant-design/icons';
 
@@ -13,37 +15,33 @@ const Signin = () => {
   const images = [
     {
       subsrc: SubSrc,
-      title: 'Lorem Ipsum1',
-      about: '1Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    },
-    {
-      subsrc: SubSrc,   
-      title: 'Lorem Ipsum2',
-      about: '2Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      title: 'Hey !',
+      subsrc2: SubSrc2,
+      about: 'Hello'
     },
     {
       subsrc: SubSrc,
-      title: 'Lorem Ipsum3',
-      about: '3Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      title: 'Are you free now?',
+      subsrc2: SubSrc2,
+      about: 'Yes'
     },
-    {
-      subsrc: SubSrc,  
-      title: 'Lorem Ipsum4',
-      about: '4Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    },
-    
-   
 ]
 
   return (
     <Main>
       
-      {images.map((images, index) => (
-        <MessageDiv>
-          <SendDiv><SendText>{images.title}</SendText></SendDiv>
-          <ReceiveDiv><ReceiveText>{images.about}</ReceiveText></ReceiveDiv>
-        </MessageDiv>
-      ))}
+        {images.map((images, index) => (
+          <MessageDiv>
+            <BtnMain1>
+              <Logo src={images.subsrc} />
+              <SendDiv><SendText>{images.title}</SendText></SendDiv>
+            </BtnMain1>
+            <BtnMain2>
+              <Logo src={images.subsrc2} />
+              <ReceiveDiv><ReceiveText>{images.about}</ReceiveText></ReceiveDiv>
+            </BtnMain2>
+          </MessageDiv>
+        ))}
         
           <Div>
             <Input placeholder='Message'></Input>

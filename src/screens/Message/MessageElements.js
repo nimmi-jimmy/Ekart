@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Main = styled.div`
     height: 550px;
+    overflow-y: scroll;
     justify-content: center;
     z-index: 1;
     margin: auto;
@@ -57,6 +58,9 @@ export const Div = styled.div`
     flex-direction: row;
     display: flex;
     margin-bottom: 2rem;
+    @media screen and (max-width: 500px) {
+        width: 75%;
+    }
 `
 export const Input = styled.input`
     border: none;
@@ -76,6 +80,7 @@ export const Input = styled.input`
 export const MessageDiv = styled.div`  
     display: flex;
     flex-direction: column; 
+    max-height: 450px;
 `
 export const PText = styled.div`
     color: #2F93F6;
@@ -83,19 +88,34 @@ export const PText = styled.div`
     font-size: 14px;  
     text-align: end;
 `
+export const BtnMain1 = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: end;
+    margin-left: auto; 
+    margin-right: 0;
+`
+export const BtnMain2 = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
+    margin-right: auto; 
+    margin-left: 0;
+`
 export const BtnMain = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    border-radius: 20px;
+    border: 1px solid #D9E2EC;
     height: 40px;
-    z-index: 1;
-    border-radius: 30px;
     width: 40px;
+    justify-content: center;
     align-items: center;
+    margin-inline: 10px;
     background-color: #F0F4F8;
-    margin-inline: 20px;
-    border: 1px solid #829AB1;
-`;
-
+`
 export const BtnText = styled.div`
     color: #000;
     font-family: "Poppins", sans-serif;   
@@ -119,7 +139,6 @@ margin-right: 0;
 
 export const ReceiveDiv = styled.div`
 background-color: #2186EB;
-
 padding: 10px;
 border-radius: 5px;
 text-align: left;
@@ -143,5 +162,8 @@ export const Signup = styled.div`
     font-family: "Poppins", sans-serif;    
 `
 export const Logo = styled.img`
-    padding: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    padding-inline: 10px;
 `;
