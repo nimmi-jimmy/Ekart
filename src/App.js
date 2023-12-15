@@ -10,6 +10,8 @@ import Search from './screens/Search/Search';
 import Message from './screens/Message/Message';
 import PhotoHome from './screens/PhotoHome/Photo';
 import Work from './screens/Work/Work';
+import Sell from './screens/Sell/Sell';
+
 
 function App() {
 
@@ -34,8 +36,9 @@ function App() {
           <Search /> */}
           {/* <Profile/> */}
           {/* <Message /> */}
-          <PhotoHome />
+          {/* <PhotoHome /> */}
           {/* <Work /> */}
+          <Sell />
       </Router>
         {/* <Router>
           <Customer />

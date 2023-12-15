@@ -59,7 +59,6 @@ const NavBar = () => {
             <PhnText onClick={handleMenuOne}><LoginOutlined /> Sign In</PhnText>
             {/* <PhnText onClick={handleMenuTwo}>Sign Up</PhnText> */}
             <PhnText onClick={handleMenuTwo}><LogoutOutlined /> Sign Out</PhnText>
-
           </Drop>
         ) : null}
     </>

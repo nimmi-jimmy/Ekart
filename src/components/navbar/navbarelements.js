@@ -46,8 +46,9 @@ export const NavMenu = styled.div`
         display: flex;        
         font-family: "Poppins", sans-serif;   
         color: #fff;   
-            align-items: center;
-    padding-inline: 10px;
+        align-items: center;
+        padding-inline: 10px;
+        cursor: pointer;
 `;
 
 export const NavItem = styled.li`
