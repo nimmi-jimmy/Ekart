@@ -12,7 +12,7 @@ import Msgimg from '../../images/msg.png';
 
 import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined } from '@ant-design/icons';
 
-const Profiles = () => {
+const PhotoHome = () => {
     const images = [
           {
             src: Group6, 
@@ -117,4 +117,4 @@ const Profiles = () => {
   );
 };
 
-export default Profiles;
+export default PhotoHome;

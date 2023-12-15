@@ -11,6 +11,7 @@ import Message from './screens/Message/Message';
 import PhotoHome from './screens/PhotoHome/Photo';
 import Work from './screens/Work/Work';
 import Sell from './screens/Sell/Sell';
+import EditProfile from './screens/EditProfile/EditProfile';
 
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
           {/* <Message /> */}
           {/* <PhotoHome /> */}
           {/* <Work /> */}
-          <Sell />
+          {/* <Sell /> */}
+          <EditProfile />
       </Router>
         {/* <Router>
           <Customer />

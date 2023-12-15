@@ -14,7 +14,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined, DeleteOutlined } from '@ant-design/icons';
 
-const Profiles = () => {
+const Sell = () => {
     const images = [
           {
             slno: 2,
@@ -161,4 +161,4 @@ const Profiles = () => {
   );
 };
 
-export default Profiles;
+export default Sell;
