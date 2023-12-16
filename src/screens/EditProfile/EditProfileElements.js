@@ -100,6 +100,9 @@ export const Profilepic = styled.img`
     border-radius: 100px;
     width: 150px;
     height: 150px;
+    border: 1px solid #949CA9;
+    object-fit:cover;
+    margin-block: 10px;
     // position: absolute;
     // top: 15%;
     // left: 10%;

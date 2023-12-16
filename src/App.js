@@ -12,6 +12,7 @@ import PhotoHome from './screens/PhotoHome/Photo';
 import Work from './screens/Work/Work';
 import Sell from './screens/Sell/Sell';
 import EditProfile from './screens/EditProfile/EditProfile';
+import Bookings from './screens/Bookings/Bookings';
 
 
 function App() {
@@ -40,7 +41,8 @@ function App() {
           {/* <PhotoHome /> */}
           {/* <Work /> */}
           {/* <Sell /> */}
-          <EditProfile />
+          {/* <EditProfile /> */}
+          <Bookings />
       </Router>
         {/* <Router>
           <Customer />

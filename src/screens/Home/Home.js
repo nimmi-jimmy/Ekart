@@ -100,39 +100,7 @@ const Home = () => {
 
   return (
     <>
-    {/* <Div>
-      <ProImg src={SubSrc} />
-    </Div> */}
-    {/* <MainDet>
-        <ImgMain src={ImgSrc} />
-        
-        <Det>
-            <MainText>The Mud Cave</MainText>           
-        
-        <DivRow>
-            <SubImg src={SubSrc} />
-            <SubDetText>Anil James</SubDetText>
-        </DivRow>
-        <SubDetText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</SubDetText>
-        <DivViewRow>
-            <DivRows>
-            <Rows><EyeOutlined /></Rows>
-            <SubText>67.3K Views</SubText>
-            </DivRows> 
-            <DivRow onClick={() => setVisible(!visible)}>
-                  <Rows>{ visible ? <HeartFilled /> : <HeartOutlined /> }</Rows>
-              <SubText>12K</SubText>
-            </DivRow> 
-        </DivViewRow>
-        <DivViewRow>
-          <MainText>Price</MainText>
-          <MainText>$63</MainText>
-        </DivViewRow>
-        <BtnMain>
-            <BtnText>Buy</BtnText>
-        </BtnMain>
-        </Det>   
-    </MainDet> */}
+   
     <Main> 
           
         {
