@@ -13,6 +13,8 @@ import Work from './screens/Work/Work';
 import Sell from './screens/Sell/Sell';
 import EditProfile from './screens/EditProfile/EditProfile';
 import Bookings from './screens/Bookings/Bookings';
+import Feedback from './screens/Feedback/Feedback';
+import Admin from './screens/Admin/Admin';
 
 
 function App() {
@@ -42,7 +44,9 @@ function App() {
           {/* <Work /> */}
           {/* <Sell /> */}
           {/* <EditProfile /> */}
-          <Bookings />
+          {/* <Bookings /> */}
+          {/* <Feedback /> */}
+          <Admin />
       </Router>
         {/* <Router>
           <Customer />

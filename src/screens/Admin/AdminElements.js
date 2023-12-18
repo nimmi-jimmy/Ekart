@@ -21,7 +21,7 @@ object-fit: cover;
 width: 150px;
 height: 150px;
 border-radius: 100px;
-margin: 10px;
+// margin: 10px;
 // border: 1px solid black;
 `;
 
