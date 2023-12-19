@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Close, Contentss, Closes, Drop, DInput, BtnTime, Contents, MainTime, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './WorkElements';
+import { PhnText, Input, Main, Img, ProfileDiv, About, Text, Div, AccDiv, DivRow, Row } from './WorkElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -10,11 +10,6 @@ import Group4 from '../../images/Group4.png';
 import Group5 from '../../images/Group5.png';
 import Group6 from '../../images/Group6.png';
 import Group7 from '../../images/Group7.png';
-import Profile from '../../images/Ellipse3.png';
-import Msgimg from '../../images/msg.png';
-import Booking from '../../images/booking.png';
-import Home from '../../screens/Home/Home';
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined, DeleteOutlined } from '@ant-design/icons';
@@ -98,49 +93,10 @@ const Profiles = () => {
             title: 'Lorem Ipsum',
             sub: '60$',
             about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-          },
-          // {
-          //   src: ImgSrc,
-          //   subsrc: SubSrc, 
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
-          // },
-          // {
-          //   src: ImgSrc, 
-          //   subsrc: SubSrc,
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
-          // },
-          // {
-          //   src: ImgSrc,
-          //   subsrc: SubSrc,
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-          
-          // },
-          // {
-          //   src: ImgSrc, 
-          //   subsrc: SubSrc,
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
-          // },
+          }
     ]
-    const [startDate, setStartDate] = useState(new Date());
     const [visible, setVisible] = useState("");
     const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
-    const handleShow = () => {
-      setShow(!show);
-    };
 
     const [file, setFile] = useState();
   function handleChange(e) {
@@ -168,7 +124,6 @@ const Profiles = () => {
       </Div>
                
             <Button title='Add to works gallery' />
-            
             
         </ProfileDiv>
         

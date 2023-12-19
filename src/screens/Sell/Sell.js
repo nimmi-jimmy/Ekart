@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Close, Contentss, Closes, Drop, DInput, BtnTime, Contents, MainTime, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './SellElements';
+import { PhnText, Input, Main, Img, ProfileDiv, About, Text, Div, AccDiv, DivRow, Row } from './SellElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -9,10 +9,9 @@ import Group3 from '../../images/Group-3.jpg';
 import Group4 from '../../images/Group-4.jpg';
 import Group5 from '../../images/Group-5.jpg';
 import Group6 from '../../images/Group-6.jpg';
-import Group7 from '../../images/Group7.png';
 import "react-datepicker/dist/react-datepicker.css";
 
-import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined, DeleteOutlined } from '@ant-design/icons';
+import { DeleteOutlined } from '@ant-design/icons';
 
 const Sell = () => {
     const images = [
@@ -86,15 +85,8 @@ const Sell = () => {
             about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
           },
     ]
-    const [startDate, setStartDate] = useState(new Date());
     const [visible, setVisible] = useState("");
-    const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
-    const handleShow = () => {
-      setShow(!show);
-    };
 
     const [file, setFile] = useState();
   function handleChange(e) {

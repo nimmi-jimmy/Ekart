@@ -1,5 +1,5 @@
 import React from 'react';
-import { Main, Text, SubText, PhnText, Div, Input, PText, BtnMain, BtnText, AccText, Signup, AccDiv } from './ForgotElements';
+import { Main, Text, SubText, PhnText, Div, Input } from './ForgotElements';
 import Button from '../../components/Button/Button';
 
 const Forgot = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Logo, Main, Text, SubText, PhnText, Div, Input, PText, BtnMain, BtnText, AccText, Signup, AccDiv } from './FeedbackElements';
+import { Logo, Main, Text, SubText, PhnText, Div, Input } from './FeedbackElements';
 import Button from '../../components/Button/Button';
 import LogoSrc from '../../images/google.png';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Main, Img, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './BookingsElements';
+import { Main, Img, Text, SubImg, Div, AccDiv, ImgMain, MainDet, MainText, Det } from './BookingsElements';
 import Button from '../../components/Button/Button';
 import SubSrc from '../../images/Ellipse3.png';
 import SubSrc1 from '../../images/booking.png';
@@ -8,7 +8,7 @@ import Group1 from '../../images/accept.png';
 import Group2 from '../../images/decline.png';
 import Group3 from '../../images/chat.png';
 
-import { HeartOutlined, HeartFilled, EyeOutlined, UserOutlined, MailOutlined, EnvironmentOutlined, PhoneOutlined, CalendarOutlined, FieldTimeOutlined, QuestionCircleOutlined, QuestionOutlined } from '@ant-design/icons';
+import { UserOutlined, MailOutlined, EnvironmentOutlined, PhoneOutlined, CalendarOutlined, FieldTimeOutlined, QuestionOutlined } from '@ant-design/icons';
 
 const Home = () => {
     const images = [
@@ -43,8 +43,6 @@ const Home = () => {
             theme: 'Party'
           }
     ]
-
-    const [visible, setVisible] = useState("");
 
   return (
     <>
@@ -94,10 +92,7 @@ const Home = () => {
                     </AccDiv>
                 </MainDet>
             </AccDiv>
-            <AccDiv>
             
-            
-            </AccDiv>
             </Div>       
         ))}
           

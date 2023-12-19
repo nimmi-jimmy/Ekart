@@ -22,7 +22,6 @@ width: 150px;
 height: 150px;
 border-radius: 100px;
 margin: 10px;
-// border: 1px solid black;
 `;
 
 export const ProImg = styled.img`
@@ -44,7 +43,6 @@ padding-right: 5px;
 export const Text = styled.div`
     color: #000;
     font-family: "Poppins", sans-serif;   
-    // font-weight: bold;
     padding-block: 5px;
     cursor: pointer;
     width: 200px;
@@ -128,7 +126,6 @@ export const SubText = styled.div`
 export const DivViewRow = styled.div`
     display: flex;
     flex-direction: row;
-    // padding: 50px 50px 50px 50px;
 `
 export const BtnMain = styled.div`
     display: flex;

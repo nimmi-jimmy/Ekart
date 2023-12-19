@@ -8,7 +8,7 @@ import SubSrc2 from '../../images/Ellipse3.png';
 
 import { EyeOutlined, EyeInvisibleOutlined, SendOutlined } from '@ant-design/icons';
 
-const Signin = () => {
+const Message = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState("");
 
@@ -53,4 +53,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Message;

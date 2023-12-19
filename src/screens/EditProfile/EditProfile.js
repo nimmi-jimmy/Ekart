@@ -1,19 +1,13 @@
 import React, { useRef, useState } from 'react';
-import { Inputs, PhnText, Input, EditDiv, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './EditProfileElements';
+import { Inputs, PhnText, Input, EditDiv, Profilepic, ProfileDiv, BtnMain, Div, DivRow } from './EditProfileElements';
 import Button from '../../components/Button/Button';
 import Avathar from '../../images/avathar.png';
 import "react-datepicker/dist/react-datepicker.css";
 
-import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined } from '@ant-design/icons';
 
 const EditProfile = ({handleFile}) => {
 
     const [file, setFile] = useState();
-    // function handleChange(e) {
-    //     console.log(e.target.files);
-    //     setFile(URL.createObjectURL(e.target.files[0]));
-    // }
-
     const inputRef = useRef(null);
 
   const handleClick = () => {
@@ -38,7 +32,6 @@ const EditProfile = ({handleFile}) => {
     <DivRow>
         <ProfileDiv>          
             <Profilepic src={file ? file : Avathar} />     
-            {/* <BtnMain type="file" style={{display:'none'}} onChange={handleChange} /> */}
             <BtnMain onClick={handleClick}>
                 Change profile picture
             </BtnMain>
@@ -48,7 +41,6 @@ const EditProfile = ({handleFile}) => {
             type="file"
             onChange={handleFileChange}
         />
-            {/* <Button title='Change profile picture'></Button> */}
         </ProfileDiv>
 
         <EditDiv>

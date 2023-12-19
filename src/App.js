@@ -32,13 +32,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-          <Home/>
-          {/* <Signin/>
+          {/* <Home/>
+          <Signin/>
           <Signup/>
-          <Forgot/>
-          <Works />
-          <Search /> */}
-          {/* <Profile/> */}
+          <Forgot/> */}
+          {/* <Works /> */}
+          {/* <Search /> */}
+          <Profile/>
           {/* <Message /> */}
           {/* <PhotoHome /> */}
           {/* <Work /> */}
@@ -46,7 +46,7 @@ function App() {
           {/* <EditProfile /> */}
           {/* <Bookings /> */}
           {/* <Feedback /> */}
-          <Admin />
+          {/* <Admin /> */}
       </Router>
         {/* <Router>
           <Customer />

@@ -20,13 +20,11 @@ const Sign = () => {
   };
 
   const handleMenuOne = () => {
-    // do something
     setOpen(false);
     setValue("Customer");
   };
 
   const handleMenuTwo = () => {
-    // do something
     setOpen(false);
     setValue("Photograper");
   };

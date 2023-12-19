@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Close, Contentss, Closes, Drop, DInput, BtnTime, Contents, MainTime, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './ProfileElements';
+import {Close, Contentss, Closes, Drop, DInput, BtnTime, MainTime, MImg, PhnText, Input, ModalDiv, Modal, Content, Main, Img, Profilepic, ProfileDiv, BtnOver, MsgImg, About, BtnMain, Text, DivRows, Div, AccDiv, DivRow, Row, MainText } from './ProfileElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -13,11 +13,10 @@ import Group7 from '../../images/Group7.png';
 import Profile from '../../images/Ellipse3.png';
 import Msgimg from '../../images/msg.png';
 import Booking from '../../images/booking.png';
-import Home from '../../screens/Home/Home';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined } from '@ant-design/icons';
+import { HeartOutlined, HeartFilled, CloseOutlined } from '@ant-design/icons';
 
 const Profiles = () => {
     const images = [
@@ -38,7 +37,6 @@ const Profiles = () => {
             title: 'Lorem Ipsum',
             sub: '60$',
             about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-       
           },
           {
             slno: 3,
@@ -47,8 +45,7 @@ const Profiles = () => {
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
             sub: '40$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'     
           },
           {
             slno: 4,
@@ -57,8 +54,7 @@ const Profiles = () => {
             subsrc: SubSrc,  
             title: 'Lorem Ipsum',
             sub: '51$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-     
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
           },
           {
             slno: 5,
@@ -67,8 +63,7 @@ const Profiles = () => {
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
             sub: '30$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'     
           },
           {
             slno: 5,
@@ -77,8 +72,7 @@ const Profiles = () => {
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
             sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'    
           },
           {
             slno: 6,
@@ -87,57 +81,23 @@ const Profiles = () => {
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
             sub: '10$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-          
+            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'     
           },
           {
-            slno: 6,
+            slno: 7,
             time: '10:00-12:00AM',
             src: Group7,
             subsrc: SubSrc,
             title: 'Lorem Ipsum',
             sub: '60$',
             about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-          },
-          // {
-          //   src: ImgSrc,
-          //   subsrc: SubSrc, 
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
-          // },
-          // {
-          //   src: ImgSrc, 
-          //   subsrc: SubSrc,
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
-          // },
-          // {
-          //   src: ImgSrc,
-          //   subsrc: SubSrc,
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-          
-          // },
-          // {
-          //   src: ImgSrc, 
-          //   subsrc: SubSrc,
-          //   title: 'Lorem Ipsum',
-          //   sub: '60$',
-          //   about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
-          // },
+          }
     ]
     const [startDate, setStartDate] = useState(new Date());
     const [visible, setVisible] = useState("");
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
     const handleShow = () => {
       setShow(!show);
     };

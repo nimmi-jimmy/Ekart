@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Main, Img, ProImg, BtnMain, BtnText, DivViewRow, Text, SubImg, DivRows, SubText, Div, AccDiv, DivRow, Rows, SubDetText, Row, ImgMain, MainDet, MainText, Det } from './HomeElements';
+import { Main, Img, Text, Div, AccDiv, DivRow } from './HomeElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -10,8 +10,6 @@ import Group4 from '../../images/Group4.png';
 import Group5 from '../../images/Group5.png';
 import Group6 from '../../images/Group6.png';
 import Group7 from '../../images/Group7.png';
-
-import { HeartOutlined, HeartFilled, EyeOutlined } from '@ant-design/icons';
 
 const Home = () => {
     const images = [
@@ -96,8 +94,6 @@ const Home = () => {
           },
     ]
 
-    const [visible, setVisible] = useState("");
-
   return (
     <>
    
@@ -106,19 +102,11 @@ const Home = () => {
         {
             images.map((image, index) => (
             <Div>
-            <Img src={image.src} key={index} />
+              <Img src={image.src} key={index} />
             <AccDiv>
             <DivRow>
-              {/* <SubImg src={image.subsrc} key={index} /> */}
               <Text>{image.title}</Text>
             </DivRow>
-            
-
-            {/* <DivRow onClick={() => setVisible(!visible)}>
-              <Row>{ visible ? <HeartFilled /> : <HeartOutlined /> }</Row>
-              <Text>{image.sub}</Text>
-            </DivRow>  */}
-           
             </AccDiv>
             </Div>       
         ))}
