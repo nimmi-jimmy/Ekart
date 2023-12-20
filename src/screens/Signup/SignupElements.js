@@ -98,6 +98,7 @@ export const AccText = styled.div`
 export const SignUp = styled.div`
     color: #2F93F6;
     font-family: "Poppins", sans-serif;    
+    cursor: pointer;
 `
 export const PDiv = styled.div`
     display: flex;

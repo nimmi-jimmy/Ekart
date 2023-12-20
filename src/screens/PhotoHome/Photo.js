@@ -7,8 +7,23 @@ import Group3 from '../../images/Group13.jpg';
 import Group4 from '../../images/Group14.jpg';
 import Group5 from '../../images/Group15.jpg';
 import Group6 from '../../images/Group16.jpg';
+import { useNavigate } from 'react-router-dom';
+import NavBar from '../../components/navbar/navbar';
 
 const PhotoHome = () => {
+  const navigation = useNavigate();
+  const handle1 = () => {
+    navigation('/Work')
+  };
+  const handle2 = () => {
+    navigation('/EditProfile')
+  };
+  const handle3 = () => {
+    navigation('/Bookings')
+  };
+  const handle4 = () => {
+    navigation('/Sell')
+  };
     const images = [
           {
             src: Group6, 
@@ -46,15 +61,15 @@ const PhotoHome = () => {
 
   return (
     <>
-
+<NavBar></NavBar>
     <DivRow>
         <ProfileDiv>
         
             <div>  
-            <Button title='Edit profile'/>
-            <Button title='Works gallery'/>
-            <Button title='Sell your photos'/>
-            <Button title='View bookings'/>
+            <Button title='Edit profile' onClick={handle2}/>
+            <Button title='Works gallery' onClick={handle1}/>
+            <Button title='Sell your photos' onClick={handle4}/>
+            <Button title='View bookings' onClick={handle3}/>
             </div>  
             
         </ProfileDiv>

@@ -3,12 +3,22 @@ import { Logo, Main, Text, SubText, PhnText, Div, Input, PText, BtnMain, BtnText
 import Button from '../../components/Button/Button';
 import LogoSrc from '../../images/google.png';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
+import NavBar from '../../components/navbar/navbar';
 
 const Signin = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState("");
-
+  const navigation = useNavigate();
+  const handle = () => {
+    navigation('/Signup')
+  };
+  const handleclick = () => {
+    navigation('/Profile')
+  };
   return (
+    <>
+    <NavBar></NavBar>
     <Main>
       <Text>Sign In</Text>
       <SubText>Let's build something greate</SubText>
@@ -27,7 +37,7 @@ const Signin = () => {
           </AccDiv>
           
       </Div>
-      <Button title='Login'/>
+      <Button title='Login' onClick={handleclick}/>
       <PText>Forgot Password?</PText>
       <BtnMain>
         <Logo src={LogoSrc}/>
@@ -36,9 +46,10 @@ const Signin = () => {
       </BtnMain>
       <AccDiv>
         <AccText>Don't have an account?</AccText>
-        <Signup>Signup</Signup>
+        <Signup onClick={handle}>Signup</Signup>
       </AccDiv>
     </Main>
+    </>
   );
 };
 

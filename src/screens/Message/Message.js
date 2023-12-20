@@ -7,6 +7,7 @@ import SubSrc2 from '../../images/Ellipse3.png';
 
 
 import { EyeOutlined, EyeInvisibleOutlined, SendOutlined } from '@ant-design/icons';
+import NavBar from '../../components/navbar/navbar';
 
 const Message = () => {
   const [password, setPassword] = useState("");
@@ -28,6 +29,7 @@ const Message = () => {
 ]
 
   return (
+    <><NavBar></NavBar>
     <Main>
       
         {images.map((images, index) => (
@@ -50,6 +52,7 @@ const Message = () => {
             </BtnMain>
           </Div>
     </Main>
+    </>
   );
 };
 

@@ -13,6 +13,8 @@ import Group7 from '../../images/Group7.png';
 import "react-datepicker/dist/react-datepicker.css";
 
 import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined, DeleteOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
+import NavBar from '../../components/navbar/navbar';
 
 const Profiles = () => {
     const images = [
@@ -97,17 +99,17 @@ const Profiles = () => {
     ]
     const [visible, setVisible] = useState("");
     const [show, setShow] = useState(false);
-
+    const navigation = useNavigate();
     const [file, setFile] = useState();
-  function handleChange(e) {
-      console.log(e.target.files);
-      setFile(URL.createObjectURL(e.target.files[0]));
-  }
+    function handleChange(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
 
 
   return (
     <>
-
+<NavBar></NavBar>
     <DivRow>
         <ProfileDiv>
         <Div>

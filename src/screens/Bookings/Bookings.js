@@ -9,6 +9,7 @@ import Group2 from '../../images/decline.png';
 import Group3 from '../../images/chat.png';
 
 import { UserOutlined, MailOutlined, EnvironmentOutlined, PhoneOutlined, CalendarOutlined, FieldTimeOutlined, QuestionOutlined } from '@ant-design/icons';
+import NavBar from '../../components/navbar/navbar';
 
 const Home = () => {
     const images = [
@@ -46,7 +47,7 @@ const Home = () => {
 
   return (
     <>
-   
+   <NavBar></NavBar>
     <Main> 
           
         {

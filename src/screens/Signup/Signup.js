@@ -3,6 +3,8 @@ import { Main, Logo, Text, SubText, PhnText, Div, Divp, PassDiv, Divc, Input, Bt
 import Button from '../../components/Button/Button';
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
 import LogoSrc from '../../images/google.png';
+import { useNavigate } from 'react-router-dom';
+import NavBar from '../../components/navbar/navbar';
 
 const Sign = () => {
 
@@ -34,8 +36,14 @@ const Sign = () => {
       console.log(e.target.files);
       setFile(URL.createObjectURL(e.target.files[0]));
   }
+  const navigation = useNavigate();
+  const handle = () => {
+    navigation('/Signin')
+  };
 
   return (
+    <>
+    <NavBar></NavBar>
     <Main>
       <Text>Sign Up</Text>
       <SubText>Enter details to create your account</SubText>
@@ -78,16 +86,17 @@ const Sign = () => {
           </Divc>
           </PDiv>
       </Div>
-      <Button title='Sign up'/>
+      <Button title='Sign up' onClick={handle}/>
       <BtnMain>
           <Logo src={LogoSrc}/>
           <BtnText>Sign up with Google</BtnText>
       </BtnMain>
       <AccDiv>
         <AccText>Already have an account?</AccText>
-        <SignUp>Sign in</SignUp>
+        <SignUp onClick={handle}>Sign in</SignUp>
       </AccDiv>
     </Main>
+    </>
   );
 };
 

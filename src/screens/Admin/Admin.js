@@ -6,6 +6,7 @@ import SubSrc2 from '../../images/avathar.png';
 
 
 import { UserOutlined, MailOutlined, FormOutlined } from '@ant-design/icons';
+import NavBar from '../../components/navbar/navbar';
 
 const Home = () => {
     const customer = [
@@ -28,6 +29,7 @@ const Home = () => {
 
   return (
     <>
+    <NavBar></NavBar>
         <MainText style={{paddingInline: 50, paddingTop: 20}}>Customer</MainText>
         <Main>         
             {

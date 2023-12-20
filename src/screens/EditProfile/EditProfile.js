@@ -3,6 +3,7 @@ import { Inputs, PhnText, Input, EditDiv, Profilepic, ProfileDiv, BtnMain, Div, 
 import Button from '../../components/Button/Button';
 import Avathar from '../../images/avathar.png';
 import "react-datepicker/dist/react-datepicker.css";
+import NavBar from '../../components/navbar/navbar';
 
 
 const EditProfile = ({handleFile}) => {
@@ -28,7 +29,7 @@ const EditProfile = ({handleFile}) => {
   };
 
   return (
-
+<><NavBar></NavBar>
     <DivRow>
         <ProfileDiv>          
             <Profilepic src={file ? file : Avathar} />     
@@ -55,7 +56,7 @@ const EditProfile = ({handleFile}) => {
             </Div>     
         </EditDiv>
     </DivRow>
-    
+    </>
   );
 };
 

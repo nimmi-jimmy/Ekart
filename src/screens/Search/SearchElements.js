@@ -16,8 +16,33 @@ export const MainDet= styled.div`
 //   max-width: 400px;
 `;
 
+export const Drop = styled.div`
+    border-radius: 5px;
+    background-color: #fff;
+    width: 31%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    flex-direction: column;
+    color: #fff;
+    padding: 10px;
+     @media screen and (max-width: 500px) {
+        width: 61%
+    }
+`
+export const PhnText = styled.div`
+    color: #000;
+    font-family: "Poppins", sans-serif; 
+    font-size: 14px;  
+    padding: 10px 0px 10px 0px;
+`
+
 export const NavbarContainer = styled.input`
-position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

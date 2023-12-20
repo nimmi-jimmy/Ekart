@@ -89,7 +89,8 @@ export const AccText = styled.div`
 `
 export const Signup = styled.div`
     color: #2F93F6;
-    font-family: "Poppins", sans-serif;    
+    font-family: "Poppins", sans-serif;   
+    cursor: pointer; 
 `
 export const Logo = styled.img`
     padding: 20px;

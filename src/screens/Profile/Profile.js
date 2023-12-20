@@ -17,6 +17,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import { HeartOutlined, HeartFilled, CloseOutlined } from '@ant-design/icons';
+import NavBar from '../../components/navbar/navbar';
+import { useNavigate } from 'react-router-dom';
 
 const Profiles = () => {
     const images = [
@@ -145,8 +147,28 @@ const Profiles = () => {
     setOpens(!opens);
   }
 
+  const [isHovering, setIsHovering] = useState(false);
+  const [isactive, setIsActive] = React.useState(false);
+
+  function handleEnter(id) {
+    localStorage.setItem("inslt", JSON.stringify(id));
+
+    setIsActive(id);
+
+    console.log("instaids", isactive === id)
+
+    setIsHovering(true);
+  }
+  const navigation = useNavigate();
+  const handle = () => {
+    navigation('/Works')
+  };
+  const handleclick = () => {
+    navigation('/Chat')
+  };
   return (
     <>
+    <NavBar></NavBar>
 
     <DivRow>
         <ProfileDiv>
@@ -155,13 +177,13 @@ const Profiles = () => {
             
             <AccDiv>
                 <Text>Games david</Text>
-                <BtnMain>
+                <BtnMain onClick={handleclick}>
                     <MsgImg src={Msgimg} />
                 </BtnMain>
             </AccDiv>  
             <About>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </About>
             <div>  
-            <Button title='Works gallery' onClick='/Profile'/>
+            <Button title='Works gallery' onClick={handle}/>
             <Button title='Book an appointment' onClick={handleShow}/>
             </div>  
             
@@ -267,7 +289,9 @@ const Profiles = () => {
                 </DivRow>
                 <DivRow>
                 <Text>{image.sub}</Text>
-                <DivRow onClick={() => setVisible(!visible)}>
+
+                
+                <DivRow onClick={() => [setVisible(!visible),handleEnter(image?.slno)]}>
                 <Row>{ visible ? <HeartFilled /> : <HeartOutlined /> }</Row>  
                 </DivRow>
                 </DivRow>

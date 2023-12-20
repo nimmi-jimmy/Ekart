@@ -3,12 +3,14 @@ import { Logo, Main, Text, SubText, PhnText, Div, Input } from './FeedbackElemen
 import Button from '../../components/Button/Button';
 import LogoSrc from '../../images/google.png';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
+import NavBar from '../../components/navbar/navbar';
 
 const Feedback = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState("");
 
   return (
+    <><NavBar></NavBar>
     <Main>
       <Text>Please enter feedback</Text>
       <Div>
@@ -21,6 +23,7 @@ const Feedback = () => {
       </Div>
       <Button title='Save' />
     </Main>
+    </>
   );
 };
 

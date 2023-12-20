@@ -19,41 +19,78 @@ import Admin from './screens/Admin/Admin';
 
 function App() {
 
-  const Customer = () => {
-    <Routes>
-      <Route path="/Home" element={<Home />} />
-      <Route path="/Signin" element={<Signin />} />
-      <Route path="/Signup" element={<Signup />} />
-      <Route path="/Works" element={<Works />} />
-      <Route path="/Search" element={<Search />} />
-      <Route path="/Profile" element={<Profile />} />
-    </Routes>
-  }
+  // const Customer = () => {
+  //   <Routes>
+  //     <Route path="/Home" element={<Home />} />
+  //     <Route path="/Signin" element={<Signin />} />
+  //     <Route path="/Signup" element={<Signup />} />
+  //     <Route path="/Works" element={<Works />} />
+  //     <Route path="/Search" element={<Search />} />
+  //     <Route path="/Profile" element={<Profile />} />
+  //   </Routes>
+  // }
   return (
-    <div className="App">
-      <Router>
-          {/* <Home/>
-          <Signin/>
-          <Signup/>
-          <Forgot/> */}
-          {/* <Works /> */}
-          {/* <Search /> */}
-          <Profile/>
-          {/* <Message /> */}
-          {/* <PhotoHome /> */}
-          {/* <Work /> */}
-          {/* <Sell /> */}
-          {/* <EditProfile /> */}
-          {/* <Bookings /> */}
-          {/* <Feedback /> */}
-          {/* <Admin /> */}
-      </Router>
-        {/* <Router>
-          <Customer />
-        </Router> */}
-    </div>
-
-   
+      <div className="App">
+            <Router>
+                <Routes>
+                    <Route
+                       path='/' element={<Search />}
+                    />
+                    <Route
+                        path="/Signup"
+                        element={<Signup/>}
+                    />
+                    <Route
+                        path="/Signin"
+                        element={<Signin/>}
+                    />
+                    <Route
+                        path="/Home"
+                        element={<Home />}
+                    />
+                    <Route
+                        path="/Profile"
+                        element={<Profile />}
+                    />
+                    <Route
+                        path="/Works"
+                        element={<Works />}
+                    />
+                    <Route
+                        path="/Chat"
+                        element={<Message />}
+                    />
+                    <Route
+                        path="/PhotoHome"
+                        element={<PhotoHome />}
+                    />
+                    <Route
+                        path="/Work"
+                        element={<Work />}
+                    />
+                    <Route
+                        path="/Sell"
+                        element={<Sell />}
+                    />
+                    <Route
+                        path="/EditProfile"
+                        element={<EditProfile />}
+                    />
+                    <Route
+                        path="/Bookings"
+                        element={<Bookings />}
+                    />
+                    <Route
+                        path="/Feedback"
+                        element={<Feedback />}
+                    />
+                    <Route
+                        path="/Admin"
+                        element={<Admin />}
+                    />
+                </Routes>
+            </Router>
+      </div>
   );
 }
 

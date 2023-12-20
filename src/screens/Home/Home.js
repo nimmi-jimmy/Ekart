@@ -10,6 +10,9 @@ import Group4 from '../../images/Group4.png';
 import Group5 from '../../images/Group5.png';
 import Group6 from '../../images/Group6.png';
 import Group7 from '../../images/Group7.png';
+import { useNavigate } from 'react-router-dom';
+import NavBar from '../../components/navbar/navbar';
+
 
 const Home = () => {
     const images = [
@@ -93,11 +96,14 @@ const Home = () => {
             sub: '12K'         
           },
     ]
-
+    const navigation = useNavigate();
+    const handle = () => {
+      navigation('/Signin')
+    };
   return (
     <>
-   
-    <Main> 
+    <NavBar></NavBar>
+    <Main onClick={handle}> 
           
         {
             images.map((image, index) => (

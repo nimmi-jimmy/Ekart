@@ -40,7 +40,7 @@ export const Closes = styled.div`
 `
 
 export const Close = styled.div`
-    right: 40%;
+    right: 22%;
     position: absolute;
 
 `
@@ -51,8 +51,9 @@ export const Content = styled.div`
     width: 60%;
     display: flex;
     flex-direction: row;
-    // border-radius: 20px;
-    
+     @media screen and (max-width: 500px) {
+        width: 80%;
+    }
 `
 export const Contentss = styled.div`
     background-color: #fefefe;
