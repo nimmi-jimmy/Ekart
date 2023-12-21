@@ -166,6 +166,9 @@ const Profiles = () => {
   const handleclick = () => {
     navigation('/Chat')
   };
+  const handleclicks = () => {
+    navigation('/Payment')
+  };
   return (
     <>
     <NavBar></NavBar>
@@ -300,7 +303,7 @@ const Profiles = () => {
                 <About>
                     {image.about}
                 </About>
-                <BtnOver>
+                <BtnOver onClick={handleclicks}>
                     <Text>Buy</Text>
                 </BtnOver>
                 </Div>  

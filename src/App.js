@@ -15,20 +15,10 @@ import EditProfile from './screens/EditProfile/EditProfile';
 import Bookings from './screens/Bookings/Bookings';
 import Feedback from './screens/Feedback/Feedback';
 import Admin from './screens/Admin/Admin';
-
+import Payment from './screens/Payment/Payment';
 
 function App() {
 
-  // const Customer = () => {
-  //   <Routes>
-  //     <Route path="/Home" element={<Home />} />
-  //     <Route path="/Signin" element={<Signin />} />
-  //     <Route path="/Signup" element={<Signup />} />
-  //     <Route path="/Works" element={<Works />} />
-  //     <Route path="/Search" element={<Search />} />
-  //     <Route path="/Profile" element={<Profile />} />
-  //   </Routes>
-  // }
   return (
       <div className="App">
             <Router>
@@ -87,6 +77,10 @@ function App() {
                     <Route
                         path="/Admin"
                         element={<Admin />}
+                    />
+                    <Route
+                        path="/Payment"
+                        element={<Payment />}
                     />
                 </Routes>
             </Router>

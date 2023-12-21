@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavbarContainer, ImgMain, MainDet, Drop, PhnText } from './SearchElements';
 import ImgSrc from '../../images/photo.jpg';
 import { useNavigate } from 'react-router-dom';
+import NavBar from '../../components/navbar/navbar';
 
 const Home = () => {
 
@@ -25,10 +26,10 @@ const Home = () => {
   };
 
   return (
-    
+    <>
+    <NavBar></NavBar>
     <MainDet>
-        <ImgMain src={ImgSrc} ></ImgMain> 
-        
+        <ImgMain src={ImgSrc}></ImgMain> 
             <NavbarContainer onClick={handleOpen} placeholder={value ? value : 'Search'}></NavbarContainer> 
             {open ? (
             <Drop>
@@ -37,7 +38,7 @@ const Home = () => {
             </Drop>
           ) : null}
     </MainDet>
-    
+    </>
   );
 };
 

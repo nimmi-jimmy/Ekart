@@ -20,6 +20,7 @@ import LogoSrc from '../../images/logo.png';
 import Profile from '../../images/Ellipse.png';
 import Arrow from '../../images/Vector.png';
 import { LoginOutlined, LogoutOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -40,7 +41,11 @@ const NavBar = () => {
     setOpen(false);
     setValue("Photograper");
   };
-
+  const navigation = useNavigate();
+ 
+  const handle = () => {
+    navigation('/Signin')
+  };
   return (
     <>
         <Nav>
@@ -56,8 +61,9 @@ const NavBar = () => {
         </Nav>
         {open ? (
           <Drop>
-            <PhnText onClick={handleMenuOne}><LoginOutlined /> Sign In</PhnText>
-            {/* <PhnText onClick={handleMenuTwo}>Sign Up</PhnText> */}
+            <div onClick={handle}>
+              <PhnText onClick={handleMenuOne}><LoginOutlined /> Sign In</PhnText>
+            </div>
             <PhnText onClick={handleMenuTwo}><LogoutOutlined /> Sign Out</PhnText>
           </Drop>
         ) : null}

@@ -84,7 +84,7 @@ export const Drop = styled.div`
     font-size: 14px; 
     background-color: #fff;
     position: absolute;
-    top: 70%;
+    // top: 70%;
     right: 0;
 `
 export const PhnText = styled.div`
@@ -92,6 +92,7 @@ export const PhnText = styled.div`
     font-family: "Poppins", sans-serif; 
     font-size: 14px;  
     padding: 10px 0px 10px 0px;
+    cursor: pointer;
 `
 export const NavLinks = styled.div`
         color: #fff;
