@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Main, Logo, Text, SubText, PhnText, Div, Divp, PassDiv, Divc, Input, BtnMain, BtnText, AccText, SignUp, AccDiv, PDiv, Drop } from './SignupElements';
+import { Img, Main, Logo, Text, SubText, PhnText, Div, Divp, PassDiv, Divc, Input, BtnMain, BtnText, AccText, SignUp, AccDiv, PDiv, Drop } from './SignupElements';
 import Button from '../../components/Button/Button';
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
 import LogoSrc from '../../images/google.png';
@@ -36,11 +36,47 @@ const Sign = () => {
       console.log(e.target.files);
       setFile(URL.createObjectURL(e.target.files[0]));
   }
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+ 
+    // States for checking the errors
+    const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState(false);
+ 
+    // Handling the name change
+    const handleName = (e) => {
+        setName(e.target.value);
+        setSubmitted(false);
+    };
+ 
+    // Handling the email change
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+        setSubmitted(false);
+    };
+
+ 
+    // Handling the form submission
+    const handleSubmit = (e) => {
+        // e.preventDefault();
+        // console.log(cpassword);
+        if (name === "" || email === "" || value === "" || file === "" || password === "" || cpassword === "") {
+          console.log("error");
+            setError(true);
+        } else {
+          console.log("no error");
+            setSubmitted(true);
+            setError(false);
+        }
+    };
+
   const navigation = useNavigate();
   const handle = () => {
+    handleSubmit();
     navigation('/Signin')
   };
-
+  
   return (
     <>
     <NavBar></NavBar>
@@ -49,9 +85,10 @@ const Sign = () => {
       <SubText>Enter details to create your account</SubText>
       <Div>
           <PhnText>Your name</PhnText>
-          <Input placeholder='Enter your name'></Input>
+          <Input placeholder='Enter your name' onChange={handleName} value={name}></Input>
           <PhnText>User type</PhnText>
-          <Input onClick={handleOpen} placeholder={value ? value : 'Select user type'}></Input>
+          <Input onClick={handleOpen} 
+          placeholder={value ? value : 'Select user type'}></Input>
           {open ? (
             <Drop>
               <PhnText onClick={handleMenuOne}>Customer</PhnText>
@@ -60,9 +97,10 @@ const Sign = () => {
           ) : null}
           <PhnText>Profile picture</PhnText>
           <Input type="file" onChange={handleChange} />
-            <img src={file} />
+            {file && <Img src={file} />}
           <PhnText>E-mail or phone number</PhnText>
-          <Input placeholder='Enter your E-mail or phone number'></Input>
+          <Input placeholder='Enter your E-mail or phone number' 
+          onChange={handleEmail} value={email}></Input>
           <PDiv>
           <Divp>
             <PhnText>Password</PhnText>

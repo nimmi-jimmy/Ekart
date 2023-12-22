@@ -53,15 +53,12 @@ export const Input = styled.input`
     color: #949CA9;
     width: 95%;
     font-size: 14px; 
-
-    
 `
-// export const PText = styled.div`
-//     color: #2F93F6;
-//     font-family: "Poppins", sans-serif; 
-//     font-size: 14px;  
-//     text-align: end;
-// `
+export const Img = styled.img`
+    width: 150px; 
+    height: 150px;
+    border: none;
+`
 
 export const PassDiv = styled.div`
 display: flex;
