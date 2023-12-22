@@ -16,6 +16,7 @@ import Bookings from './screens/Bookings/Bookings';
 import Feedback from './screens/Feedback/Feedback';
 import Admin from './screens/Admin/Admin';
 import Payment from './screens/Payment/Payment';
+import Success from './screens/Success/Success';
 
 function App() {
 
@@ -81,6 +82,10 @@ function App() {
                     <Route
                         path="/Payment"
                         element={<Payment />}
+                    />
+                    <Route
+                        path="/Success"
+                        element={<Success />}
                     />
                 </Routes>
             </Router>

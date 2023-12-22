@@ -7,7 +7,7 @@ export const Main = styled.div`
     margin: auto;
     width: 35%;
     align-items: center;
-    padding: 50px 0px 50px 0px;
+    padding: 100px 0px 50px 0px;
 
     @media screen and (max-width: 500px) {
         width: 70%;
@@ -19,24 +19,24 @@ export const Main = styled.div`
 
 export const Text = styled.div`
     // text-align: center;
-    color: #000;
+    color: #00c281;
     font-family: "Poppins", sans-serif;   
     font-weight: bold;
     font-size: 24px;
-    padding-block: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 `
 export const SubText = styled.div`
     color: #ACACAC;
     font-family: "Poppins", sans-serif; 
     font-size: 14px;  
-    padding: 20px 0px 20px 5px;
-    // font-weight: bold;
+   
 `
 export const PhnText = styled.div`
-    color: #000;
+    color: #ACACAC;
     font-family: "Poppins", sans-serif; 
     font-size: 16px;  
-    padding: 20px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
     font-weight: bold;
 `
 export const Input = styled.input`
@@ -68,16 +68,13 @@ export const BtnText = styled.div`
 `
 export const PDiv = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-    @media screen and (max-width: 500px) {
-        flex-direction: column;
-    } 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 export const Divp = styled.div`
-    width: 100%;
-    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
 `
 export const Divc = styled.div`
     width: 100%;
@@ -87,11 +84,15 @@ export const Divc = styled.div`
         padding-left: 0px;    } 
 `
 export const PassDiv = styled.div`
-    display: flex;
-    flex-direction: row;
+    margin-top: 80px
 `
 export const Div = styled.div`
-    display: flex;
-    flex-direction: row;
-    padding-right: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `
+export const Img = styled.img`
+    display: flex;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+`;
