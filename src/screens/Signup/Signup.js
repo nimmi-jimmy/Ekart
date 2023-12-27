@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Img, Main, Logo, Text, SubText, PhnText, Div, Divp, PassDiv, Divc, Input, BtnMain, BtnText, AccText, SignUp, AccDiv, PDiv, Drop } from './SignupElements';
 import Button from '../../components/Button/Button';
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
 import LogoSrc from '../../images/google.png';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../../components/navbar/navbar';
+import axios from 'axios';
 
 const Sign = () => {
 
@@ -55,26 +56,50 @@ const Sign = () => {
         setEmail(e.target.value);
         setSubmitted(false);
     };
+    const [apiResponse, setApiResponse] = useState("");
 
- 
-    // Handling the form submission
+    const data = (
+      {
+        name: name,
+        value: value,
+        file: file,
+        email: email,
+        password: password,
+        cpassword: cpassword
+      }      
+);
+
     const handleSubmit = (e) => {
-        // e.preventDefault();
-        // console.log(cpassword);
-        if (name === "" || email === "" || value === "" || file === "" || password === "" || cpassword === "") {
-          console.log("error");
-            setError(true);
-        } else {
-          console.log("no error");
-            setSubmitted(true);
-            setError(false);
-        }
-    };
+      
+    const sendData = {
+        name,
+        value,
+        file,
+        email,
+        password,
+        cpassword
+    }    
+
+    // console.log("sendData",sendData);
+
+    axios
+      .post("http://localhost/ekart/register.php", sendData)
+      
+      .then((response) => {
+        console.log("res=>",response);
+        // setApiResponse(response.data.message);
+      })
+      .catch((error) => {
+        console.error(error);
+        // setApiResponse(error.response.data.message);
+      });
+  };
+    
 
   const navigation = useNavigate();
   const handle = () => {
     handleSubmit();
-    navigation('/Signin')
+    // navigation('/Signin')
   };
   
   return (
