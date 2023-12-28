@@ -118,3 +118,16 @@ export const NavBtnLink = styled.div`
 display: flex;
 flex-direction: row;
 `;
+
+export const Input = styled.input`
+    // text-align: center;
+    border: 1px solid #F9F9F9;
+    font-family: "Poppins", sans-serif;   
+    padding-inline: 30px;
+    border-radius: 20px;
+    color: #ABABAB;
+    width: 100%;
+    font-size: 14px; 
+    margin: 10px;
+    background-color: #F9F9F9;
+`

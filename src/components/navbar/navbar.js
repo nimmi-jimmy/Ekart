@@ -15,11 +15,11 @@
 // export default Navbar;
 
 import React from 'react';
-import { Nav, Arr, NavBtn, Drop, PhnText, Logo, NavBtnLink, NavMenu } from './navbarelements';
+import { Nav, Arr, NavBtn, Drop, PhnText, Logo, NavBtnLink, NavMenu, Input } from './navbarelements';
 import LogoSrc from '../../images/logo.png';
 import Profile from '../../images/Ellipse.png';
 import Arrow from '../../images/Vector.png';
-import { LoginOutlined, LogoutOutlined } from '@ant-design/icons';
+import { LoginOutlined, LogoutOutlined, SearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
@@ -50,6 +50,9 @@ const NavBar = () => {
     <>
         <Nav>
           <Logo src={LogoSrc}/>
+
+          <NavBtnLink>
+              <Input placeholder='Search'/><SearchOutlined />
               <NavBtnLink>
                 <NavMenu>George</NavMenu>
               <NavBtn>
@@ -57,7 +60,7 @@ const NavBar = () => {
               </NavBtn>  
               <Arr src={Arrow} onClick={handleOpen}/>
               </NavBtnLink>
-              
+          </NavBtnLink> 
         </Nav>
         {open ? (
           <Drop>
