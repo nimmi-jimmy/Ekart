@@ -14,7 +14,7 @@ const Signin = () => {
     navigation('/Signup')
   };
   const handleclick = () => {
-    navigation('/Profile')
+    navigation('/ClientHome')
   };
   return (
     <>

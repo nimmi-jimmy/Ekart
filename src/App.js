@@ -17,11 +17,13 @@ import Feedback from './screens/Feedback/Feedback';
 import Admin from './screens/Admin/Admin';
 import Payment from './screens/Payment/Payment';
 import Success from './screens/Success/Success';
+import ClientHome from './screens/ClientHome/ClientHome';
 
 function App() {
 
   return (
       <div className="App">
+        
             <Router>
                 <Routes>
                     <Route
@@ -86,6 +88,10 @@ function App() {
                     <Route
                         path="/Success"
                         element={<Success />}
+                    />
+                    <Route
+                        path="/ClientHome"
+                        element={<ClientHome />}
                     />
                 </Routes>
             </Router>

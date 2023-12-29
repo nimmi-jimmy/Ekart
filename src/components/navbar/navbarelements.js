@@ -14,8 +14,8 @@ export const Nav = styled.nav`
     // border-bottom: 1px solid #fff;
     background: #000;
 
-    @media screen and (max-width: 400px) {
-        padding-inline: 30px;
+    @media screen and (max-width: 500px) {
+        padding-inline: 0px;
     }
 
     // @media screen and (max-width: 780px) {
