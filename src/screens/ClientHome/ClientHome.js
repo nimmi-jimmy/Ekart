@@ -123,7 +123,6 @@ const handleclicks = () => {
                 <DivRow>
                 <Text>{image.sub}</Text>
 
-                
                 <DivRow onClick={() => [setVisible(!visible),handleEnter(image?.slno)]}>
                 <Row>{ visible ? <HeartFilled/> : <HeartOutlined /> }</Row>  
                 </DivRow>
