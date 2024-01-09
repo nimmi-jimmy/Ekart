@@ -18,6 +18,8 @@ import Admin from './screens/Admin/Admin';
 import Payment from './screens/Payment/Payment';
 import Success from './screens/Success/Success';
 import ClientHome from './screens/ClientHome/ClientHome';
+import Vieworders from './screens/ViewOrders/Vieworders';
+import Shipping from './screens/Shipping/Shipping';
 
 function App() {
 
@@ -92,6 +94,14 @@ function App() {
                     <Route
                         path="/ClientHome"
                         element={<ClientHome />}
+                    />
+                    <Route
+                        path="/Vieworders"
+                        element={<Vieworders />}
+                    />
+                    <Route
+                        path="/Shipping"
+                        element={<Shipping />}
                     />
                 </Routes>
             </Router>

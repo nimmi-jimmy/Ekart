@@ -24,6 +24,9 @@ const PhotoHome = () => {
   const handle4 = () => {
     navigation('/Sell')
   };
+  const handle5 = () => {
+    navigation('/Vieworders')
+  };
     const images = [
           {
             src: Group6, 
@@ -67,9 +70,10 @@ const PhotoHome = () => {
         
             <div>  
             <Button title='Edit profile' onClick={handle2}/>
-            <Button title='Works gallery' onClick={handle1}/>
-            <Button title='Sell your photos' onClick={handle4}/>
+            <Button title='Portfolio' onClick={handle1}/>
+            <Button title='Sell my images' onClick={handle4}/>
             <Button title='View bookings' onClick={handle3}/>
+            <Button title='View Orders' onClick={handle5}/>
             </div>  
             
         </ProfileDiv>

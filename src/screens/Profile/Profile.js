@@ -186,7 +186,7 @@ const Profiles = () => {
             </AccDiv>  
             <About>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </About>
             <div>  
-            <Button title='Works gallery' onClick={handle}/>
+            <Button title='Buy images' onClick={handle}/>
             <Button title='Book an appointment' onClick={handleShow}/>
             </div>  
             
