@@ -9,22 +9,42 @@ import NavBar from '../../components/navbar/navbar';
 const Signin = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState("");
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+    setSubmitted(false);
+};
   const navigation = useNavigate();
+
+  
+  const handleSubmit = (e) => {
+      
+    const sendData = {
+        email,
+        password
+    }    
+
+    email == 'games@gmail.com' ? navigation('/Profile') : navigation('/PhotoHome');
+
+  };
+
   const handle = () => {
     navigation('/Signup')
   };
   const handleclick = () => {
-    navigation('/ClientHome')
+    navigation('/Profile')
   };
   return (
     <>
-    <NavBar></NavBar>
+    {/* <NavBar></NavBar> */}
     <Main>
       <Text>Sign In</Text>
       <SubText>Let's build something greate</SubText>
       <Div>
           <PhnText>E-mail or phone number</PhnText>
-          <Input placeholder='Enter E-mail or phone number' ></Input>
+          <Input placeholder='Enter E-mail or phone number' onChange={handleEmail} value={email}></Input>
           
           <PhnText>Password</PhnText>
 
@@ -37,13 +57,13 @@ const Signin = () => {
           </AccDiv>
           
       </Div>
-      <Button title='Login' onClick={handleclick}/>
-      <PText>Forgot Password?</PText>
-      <BtnMain>
+      <Button title='Login' onClick={handleSubmit}/>
+      {/* <PText>Forgot Password?</PText> */}
+      {/* <BtnMain>
         <Logo src={LogoSrc}/>
        
         <BtnText>Sign up with Google</BtnText>
-      </BtnMain>
+      </BtnMain> */}
       <AccDiv>
         <AccText>Don't have an account?</AccText>
         <Signup onClick={handle}>Signup</Signup>

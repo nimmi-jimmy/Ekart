@@ -82,29 +82,29 @@ const Sign = () => {
 
     // console.log("sendData",sendData);
 
-    axios
-      .post("http://localhost/ekart/register.php", sendData)
+    // axios
+    //   .post("http://localhost/ekart/register.php", sendData)
       
-      .then((response) => {
-        console.log("res=>",response);
-        // setApiResponse(response.data.message);
-      })
-      .catch((error) => {
-        console.error(error);
-        // setApiResponse(error.response.data.message);
-      });
+    //   .then((response) => {
+    //     console.log("res=>",response);
+    //     // setApiResponse(response.data.message);
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //     // setApiResponse(error.response.data.message);
+    //   });
   };
     
 
   const navigation = useNavigate();
   const handle = () => {
-    handleSubmit();
-    // navigation('/Signin')
+    // handleSubmit();
+    navigation('/Signin');
   };
   
   return (
     <>
-    <NavBar></NavBar>
+    {/* <NavBar></NavBar> */}
     <Main>
       <Text>Sign Up</Text>
       <SubText>Enter details to create your account</SubText>
@@ -149,11 +149,11 @@ const Sign = () => {
           </Divc>
           </PDiv>
       </Div>
-      <Button title='Sign up' onClick={handle}/>
-      <BtnMain>
+      <Button title='Sign up' onClick={handleSubmit}/>
+      {/* <BtnMain>
           <Logo src={LogoSrc}/>
           <BtnText>Sign up with Google</BtnText>
-      </BtnMain>
+      </BtnMain> */}
       <AccDiv>
         <AccText>Already have an account?</AccText>
         <SignUp onClick={handle}>Sign in</SignUp>

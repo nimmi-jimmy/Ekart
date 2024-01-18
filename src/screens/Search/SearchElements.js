@@ -16,6 +16,24 @@ export const MainDet= styled.div`
 //   max-width: 400px;
 `;
 
+export const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 28rem;
+`
+export const Logo = styled.img`
+    // width: 50px;
+    // height: 50px;
+    justify-content: center;
+`;
+
+export const Cen = styled.div`
+    justify-content: center;
+    display: flex;
+    padding-block: 15px;
+`;
+
 export const Drop = styled.div`
     border-radius: 5px;
     background-color: #fff;
@@ -40,7 +58,14 @@ export const PhnText = styled.div`
     font-size: 14px;  
     padding: 10px 0px 10px 0px;
 `
-
+export const PhnText1 = styled.div`
+    color: #000;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif; 
+    font-size: 14px;  
+    padding: 10px 0px 10px 0px;
+    cursor: pointer;
+`
 export const NavbarContainer = styled.input`
     position: absolute;
     top: 50%;

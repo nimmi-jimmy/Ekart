@@ -23,6 +23,7 @@ const Vieworders = () => {
             address: 'Bangaluru',
             phone: '6788339989',
             post: '	UB10',
+            id: '12345'
           },
           {
             src: SubSrc1, 
@@ -34,6 +35,7 @@ const Vieworders = () => {
             address: 'Kerala',
             phone: '9766339989',
             post: '	UB10',
+            id: '15566'
           },
           {
             src: SubSrc2, 
@@ -45,6 +47,7 @@ const Vieworders = () => {
             address: 'Bangaluru',
             phone: '8788349999',
             post: '	UB10',
+            id: '54471'
           }
     ]
 
@@ -94,6 +97,9 @@ const Vieworders = () => {
                     <AccDiv>
                         <SubImg><InboxOutlined /></SubImg>  
                         <Text>{image.post}</Text>
+                    </AccDiv> 
+                    <AccDiv>
+                        <Text>Transaction id: {image.id}</Text>
                     </AccDiv>                 
                 </MainDet>
                 
