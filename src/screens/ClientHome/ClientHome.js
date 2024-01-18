@@ -17,78 +17,78 @@ import { HeartFilled, HeartOutlined } from '@ant-design/icons';
 
 const ClientHome = () => {
     const images = [
-        {
-          slno: 1,
-          time: '08:00-10:00AM',
-          src: ImgSrc, 
-          subsrc: SubSrc,
-          title: 'Lorem Ipsum',
-          sub: '12$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        },
-        {
-          slno: 2,
-          time: '10:00-12:00PM',
-          src: Group1,
-          subsrc: SubSrc,   
-          title: 'Lorem Ipsum',
-          sub: '60$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        },
-        {
-          slno: 3,
-          time: '12:00-02:00PM',
-          src: Group2,  
-          subsrc: SubSrc,
-          title: 'Lorem Ipsum',
-          sub: '40$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'     
-        },
-        {
-          slno: 4,
-          time: '02:00-04:00PM',
-          src: Group3,   
-          subsrc: SubSrc,  
-          title: 'Lorem Ipsum',
-          sub: '51$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
-        },
-        {
-          slno: 5,
-          time: '04:00-06:00PM',
-          src: Group4,  
-          subsrc: SubSrc,
-          title: 'Lorem Ipsum',
-          sub: '30$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'     
-        },
-        {
-          slno: 5,
-          time: '06:00-08:00PM',
-          src: Group5,
-          subsrc: SubSrc,
-          title: 'Lorem Ipsum',
-          sub: '60$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'    
-        },
-        {
-          slno: 6,
-          time: '08:00-10:00PM',
-          src: Group6,
-          subsrc: SubSrc,
-          title: 'Lorem Ipsum',
-          sub: '10$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'     
-        },
-        {
-          slno: 7,
-          time: '10:00-12:00AM',
-          src: Group7,
-          subsrc: SubSrc,
-          title: 'Lorem Ipsum',
-          sub: '60$',
-          about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        }
+      {
+        slno: 1,
+        time: '08:00-10:00AM',
+        src: ImgSrc, 
+        subsrc: SubSrc,
+        title: 'Sobha City',
+        sub: '£12',
+        about: 'SOBHA offers a fabulous range of new flats, luxury apartments, and villa projects for sale in Thrissur, Kerala.'
+      },
+      {
+        slno: 2,
+        time: '10:00-12:00PM',
+        src: Group1,
+        subsrc: SubSrc,   
+        title: 'Skyline',
+        sub: '£60',
+        about: 'Tallest building in Bangalore”. A pocket park, a sky bar, and a viewing gallery “with sky bridges” '
+      },
+      {
+        slno: 3,
+        time: '12:00-02:00PM',
+        src: Group2,  
+        subsrc: SubSrc,
+        title: 'Hyatt',
+        sub: '£40',
+        about: 'Hyatt Hotels Corporation, commonly known as Hyatt Hotels & Resorts. Hyatt introduced the Hyatt Place brand.'     
+      },
+      {
+        slno: 4,
+        time: '02:00-04:00PM',
+        src: Group3,   
+        subsrc: SubSrc,  
+        title: 'Chennai',
+        sub: '£51',
+        about: 'Chennai, on the Bay of Bengal in eastern India, is the capital of the state of Tamil Nadu.' 
+      },
+      {
+        slno: 5,
+        time: '04:00-06:00PM',
+        src: Group4,  
+        subsrc: SubSrc,
+        title: 'Madurai',
+        sub: '£30',
+        about: 'Madurai is an energetic, ancient city on the Vaigai River in the South Indian state of Tamil Nadu.'     
+      },
+      {
+        slno: 5,
+        time: '06:00-08:00PM',
+        src: Group5,
+        subsrc: SubSrc,
+        title: 'Gardens by the Bay',
+        sub: '£46',
+        about: 'The Supertree Groves at Gardens by the Bay (Source) Gardens by the Bay is the most famous garden in Singapore.'    
+      },
+      {
+        slno: 6,
+        time: '08:00-10:00PM',
+        src: Group6,
+        subsrc: SubSrc,
+        title: 'Chinese architecture',
+        sub: '£10',
+        about: 'Chinese architecture is the embodiment of an architectural style that has developed over millennia in China.'     
+      },
+      {
+        slno: 7,
+        time: '10:00-12:00AM',
+        src: Group7,
+        subsrc: SubSrc,
+        title: 'Inland Steel Building',
+        sub: '£34',
+        about: 'he Inland Steel Building is a skyscraper located at 30 W. Monroe Street in Chicago, Illinois.'
+      }
   ]
   const [visible, setVisible] = useState("");
 
