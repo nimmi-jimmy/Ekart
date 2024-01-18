@@ -6,6 +6,7 @@ import Signup from './screens/Signup/Signup';
 import Forgot from './screens/Forgot/Forgot';
 import Works from './screens/Home/Home';
 import Profile from './screens/Profile/Profile';
+import Profile1 from './screens/Profile_copy/Profile1';
 import Search from './screens/Search/Search';
 import Message from './screens/Message/Message';
 import PhotoHome from './screens/PhotoHome/Photo';
@@ -46,6 +47,10 @@ function App() {
                     <Route
                         path="/Profile"
                         element={<Profile />}
+                    />
+                    <Route
+                        path="/Profile1"
+                        element={<Profile1 />}
                     />
                     <Route
                         path="/Works"

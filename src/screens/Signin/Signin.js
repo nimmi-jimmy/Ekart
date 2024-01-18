@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Logo, Main, Text, SubText, PhnText, Div, Input, PText, BtnMain, BtnText, AccText, Signup, AccDiv } from './SignInElements';
+import { Logo, Main, Text, SubText, PhnText, Div, Input, PText, BtnMain, BtnText, AccText, Signup, AccDiv, Req } from './SignInElements';
 import Button from '../../components/Button/Button';
 import LogoSrc from '../../images/google.png';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
@@ -11,7 +11,8 @@ const Signin = () => {
   const [visible, setVisible] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
-
+  const [apiemail, setApiemail] = useState(false);
+  const [apipassword, setApipassword] = useState(false);
   const handleEmail = (e) => {
     setEmail(e.target.value);
     setSubmitted(false);
@@ -25,9 +26,11 @@ const Signin = () => {
         email,
         password
     }    
+    email == '' && setApiemail(true);
+    password == '' && setApipassword(true);
 
-    email == 'games@gmail.com' ? navigation('/Profile') : navigation('/PhotoHome');
-
+    email == 'george@gmail.com' ? navigation('/Profile')
+    : email && password && navigation('/PhotoHome')
   };
 
   const handle = () => {
@@ -45,7 +48,7 @@ const Signin = () => {
       <Div>
           <PhnText>E-mail or phone number</PhnText>
           <Input placeholder='Enter E-mail or phone number' onChange={handleEmail} value={email}></Input>
-          
+          {apiemail && <Req>Email is required!</Req>}
           <PhnText>Password</PhnText>
 
           <AccDiv>
@@ -55,7 +58,8 @@ const Signin = () => {
           </Input>
           <div style={{marginLeft: "-20px"}} onClick={() => setVisible(!visible)}>{ visible ? <EyeOutlined /> : <EyeInvisibleOutlined /> }</div>  
           </AccDiv>
-          
+          {apipassword && <Req>Password is required!</Req>}
+
       </Div>
       <Button title='Login' onClick={handleSubmit}/>
       {/* <PText>Forgot Password?</PText> */}

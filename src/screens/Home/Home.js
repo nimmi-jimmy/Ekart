@@ -139,6 +139,7 @@ import Group7 from '../../images/Group7.png';
 import NavBar from '../../components/navbar/navbar';
 import { useNavigate } from 'react-router-dom';
 import { HeartFilled, HeartOutlined } from '@ant-design/icons';
+import NavBar1 from '../../components/navbar_copy/navbar1';
 
 
 const Home = () => {
@@ -230,24 +231,24 @@ function handleEnter(id) {
 
 const navigation = useNavigate();
 const handleclicks = () => {
-  navigation('/Payment')
+  navigation('/Signup')
 };
     
   return (
     <>
-    <NavBar></NavBar>
+    <NavBar1></NavBar1>
     <Main> 
           
         {
             images.map((image, index) => (
                 <Div>                 
-                <Img src={image.src} key={index}/>
+                <Img src={image.src} key={index} onClick={handleclicks}/>
                 <AccDiv>
                 <DivRow>
                 <Text>{image.title}</Text>
                 </DivRow>
                 <DivRow>
-                <Text>{image.sub}</Text>
+                {/* <Text>{image.sub}</Text> */}
 
                 <DivRow onClick={() => [setVisible(!visible),handleEnter(image?.slno)]}>
                 <Row>{ visible ? <HeartFilled/> : <HeartOutlined /> }</Row>  
@@ -258,9 +259,9 @@ const handleclicks = () => {
                 <About>
                     {image.about}
                 </About>
-                <BtnOver onClick={handleclicks}>
+                {/* <BtnOver onClick={handleclicks}>
                     <Text>Buy</Text>
-                </BtnOver>
+                </BtnOver> */}
                 </Div>    
         ))}
           

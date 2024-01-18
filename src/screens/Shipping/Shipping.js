@@ -100,6 +100,8 @@ const Shipping = () => {
   const navigation = useNavigate();
   const handle = () => {
     
+      navigation('/Payment')
+    
   };
   
   return (

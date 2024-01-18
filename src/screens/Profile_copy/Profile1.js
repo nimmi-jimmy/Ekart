@@ -101,7 +101,7 @@ const Profiles = () => {
 
     const handleClose = () => {
       setShow(false);
-      navigation('/Profile1');
+      navigation('/Shipping');
     }
     const handleShow = () => {
       setShow(!show);
@@ -191,7 +191,7 @@ const Profiles = () => {
             <About>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </About>
             <div>  
             <Button title='Buy images' onClick={handle}/>
-            <Button title='Book your shoot' onClick={handleShow}/>
+            <Button title='Request on pending'/>
             </div>  
             
         </ProfileDiv>

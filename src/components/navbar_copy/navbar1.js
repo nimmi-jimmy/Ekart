@@ -22,7 +22,7 @@ import Arrow from '../../images/Vector.png';
 import { LoginOutlined, LogoutOutlined, SearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar1 = () => {
 
   const handleOpen = () => {
     setOpen(!open);
@@ -40,7 +40,6 @@ const NavBar = () => {
     // do something
     setOpen(false);
     setValue("Photograper");
-    
   };
   const navigation = useNavigate();
  
@@ -53,26 +52,27 @@ const NavBar = () => {
           <Logo src={LogoSrc}/>
 
           <NavBtnLink>
-              <Input placeholder='Search'/><SearchOutlined />
+              {/* <Input placeholder='Search'/><SearchOutlined /> */}
               <NavBtnLink>
-                <NavMenu>George</NavMenu>
-              <NavBtn>
+                <NavMenu onClick={handle}>Sign In</NavMenu>
+
+              {/* <NavBtn>
                  <Logo src={Profile}/>
               </NavBtn>  
-              <Arr src={Arrow} onClick={handleOpen}/>
+              <Arr src={Arrow} onClick={handleOpen}/> */}
               </NavBtnLink>
           </NavBtnLink> 
         </Nav>
         {open ? (
           <Drop>
-            {/* <div onClick={handle}>
+            <div onClick={handle}>
               <PhnText onClick={handleMenuOne}><LoginOutlined /> Sign In</PhnText>
-            </div> */}
-            <PhnText onClick={handle}><LogoutOutlined /> Sign Out</PhnText>
+            </div>
+            <PhnText onClick={handleMenuTwo}><LogoutOutlined /> Sign Out</PhnText>
           </Drop>
         ) : null}
     </>
   );
 };
 
-export default NavBar;
+export default NavBar1;

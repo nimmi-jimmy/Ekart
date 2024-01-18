@@ -32,6 +32,13 @@ export const SubText = styled.div`
     font-size: 14px; 
     text-align: center;
 `
+export const Req = styled.div`
+    color: red;
+    font-family: "Poppins", sans-serif;  
+    font-size: 12px; 
+    padding-top: 5px;
+`
+
 export const PhnText = styled.div`
     color: #000;
     font-family: "Poppins", sans-serif; 
@@ -105,9 +112,11 @@ export const PDiv = styled.div`
     @media screen and (max-width: 500px) {
         flex-direction: column;
     } 
-    
+`
 
-    `
+export const Sp = styled.div`
+    padding-left: 5px;
+`
 export const Divp = styled.div`
     width: 100%;
     padding-right: 10px;

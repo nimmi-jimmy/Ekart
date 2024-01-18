@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Img, Main, Logo, Text, SubText, PhnText, Div, Divp, PassDiv, Divc, Input, BtnMain, BtnText, AccText, SignUp, AccDiv, PDiv, Drop } from './SignupElements';
+import { Img, Main, Sp, Logo, Text, SubText, PhnText, Div, Divp, PassDiv, Divc, Input, BtnMain, BtnText, AccText, SignUp, AccDiv, PDiv, Drop, Req } from './SignupElements';
 import Button from '../../components/Button/Button';
-import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
+import { CaretDownFilled, CaretDownOutlined, EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
 import LogoSrc from '../../images/google.png';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../../components/navbar/navbar';
@@ -56,7 +56,12 @@ const Sign = () => {
         setEmail(e.target.value);
         setSubmitted(false);
     };
-    const [apiResponse, setApiResponse] = useState("");
+    const [apiname, setApiname] = useState(false);
+    const [apiuser, setApiuser] = useState(false);
+    const [apiimg, setApiimg] = useState(false);
+    const [apiemail, setApiemail] = useState(false);
+    const [apipassword, setApipassword] = useState(false);
+    const [apicpassword, setApicpassword] = useState(false);
 
     const data = (
       {
@@ -80,7 +85,20 @@ const Sign = () => {
         cpassword
     }    
 
-    // console.log("sendData",sendData);
+    name == '' && setApiname(true);
+    value == '' && setApiuser(true);
+    file == undefined && setApiimg(true);
+    email == '' && setApiemail(true);
+    password == '' && setApipassword(true);
+    cpassword == '' && setApicpassword(true);
+
+    sendData && handle1();
+    // sendData ?
+    // alert("Signup successful") 
+    // &&
+    // navigation('/Signin')
+    // : ("");
+    
 
     // axios
     //   .post("http://localhost/ekart/register.php", sendData)
@@ -98,7 +116,11 @@ const Sign = () => {
 
   const navigation = useNavigate();
   const handle = () => {
-    // handleSubmit();
+    navigation('/Signin');
+  };
+
+  const handle1 = () => {
+    alert("Signup successful");
     navigation('/Signin');
   };
   
@@ -111,21 +133,28 @@ const Sign = () => {
       <Div>
           <PhnText>Your name</PhnText>
           <Input placeholder='Enter your name' onChange={handleName} value={name}></Input>
+          {apiname && <Req>Name is required!</Req>}
           <PhnText>User type</PhnText>
-          <Input onClick={handleOpen} 
-          placeholder={value ? value : 'Select user type'}></Input>
+          <PDiv>
+            <Input onClick={handleOpen}
+            placeholder={value ? value : 'Select user type'}></Input>
+            <div style={{marginLeft: "-100px", marginRight: "20px", marginTop: "10px"}} onClick={handleOpen}><CaretDownOutlined /></div>  
+          </PDiv>
           {open ? (
             <Drop>
               <PhnText onClick={handleMenuOne}>Customer</PhnText>
               <PhnText onClick={handleMenuTwo}>photograper</PhnText>
             </Drop>
           ) : null}
+          {apiuser && <Req>User type is required!</Req>}
           <PhnText>Profile picture</PhnText>
           <Input type="file" onChange={handleChange} />
             {file && <Img src={file} />}
+            {apiimg && <Req>Profile is required!</Req>}
           <PhnText>E-mail or phone number</PhnText>
           <Input placeholder='Enter your E-mail or phone number' 
           onChange={handleEmail} value={email}></Input>
+          {apiemail && <Req>Email is required!</Req>}
           <PDiv>
           <Divp>
             <PhnText>Password</PhnText>
@@ -137,6 +166,7 @@ const Sign = () => {
             <div style={{marginLeft: "-20px"}} onClick={() => setVisible(!visible)}>{ visible ? <EyeOutlined /> : <EyeInvisibleOutlined /> }</div>  
             </PassDiv>
           </Divp>
+          
           <Divc>
             <PhnText>Confirm Password</PhnText>
             <PassDiv>
@@ -148,6 +178,11 @@ const Sign = () => {
             </PassDiv>
           </Divc>
           </PDiv>
+          <PDiv>
+          {apipassword && <Req>Password is required!</Req>}
+          {apicpassword && <Req>Confirm password is required!</Req>}
+          </PDiv>
+
       </Div>
       <Button title='Sign up' onClick={handleSubmit}/>
       {/* <BtnMain>
