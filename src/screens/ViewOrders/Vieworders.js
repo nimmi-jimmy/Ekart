@@ -7,6 +7,7 @@ import SubSrc2 from '../../images/Group-3.jpg';
 import Group1 from '../../images/Group-4.jpg';
 import Group2 from '../../images/Group-5.jpg';
 import Group3 from '../../images/Group-6.jpg';
+import NavBar2 from '../../components/navbar_photo/navbar2';
 
 import { UserOutlined, MailOutlined, EnvironmentOutlined, PhoneOutlined, CalendarOutlined, FieldTimeOutlined, QuestionOutlined, InboxOutlined } from '@ant-design/icons';
 import NavBar from '../../components/navbar/navbar';
@@ -53,7 +54,7 @@ const Vieworders = () => {
 
   return (
     <>
-   <NavBar></NavBar>
+   <NavBar2></NavBar2>
     <Main> 
           
         {

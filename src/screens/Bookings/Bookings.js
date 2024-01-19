@@ -7,9 +7,11 @@ import SubSrc2 from '../../images/avathar.png';
 import Group1 from '../../images/accept.png';
 import Group2 from '../../images/decline.png';
 import Group3 from '../../images/chat.png';
+import NavBar2 from '../../components/navbar_photo/navbar2';
 
 import { UserOutlined, MailOutlined, EnvironmentOutlined, PhoneOutlined, CalendarOutlined, FieldTimeOutlined, QuestionOutlined } from '@ant-design/icons';
 import NavBar from '../../components/navbar/navbar';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const images = [
@@ -44,10 +46,19 @@ const Home = () => {
             theme: 'Party'
           }
     ]
-
+    const navigation = useNavigate();
+    const handleclicks = () => {
+      navigation('/Chat')
+    };
+    const handle = () => {
+        alert("Booking confirmed on 12/01/2024");
+      };
+      const handle2 = () => {
+        alert("Not available for this date");
+      };
   return (
     <>
-   <NavBar></NavBar>
+   <NavBar2></NavBar2>
     <Main> 
           
         {
@@ -57,9 +68,9 @@ const Home = () => {
                 <MainDet>
                     <Img src={image.src} key={index} />
                     <Det>
-                        <ImgMain src={Group1} />
-                        <ImgMain src={Group2} />
-                        <ImgMain src={Group3} />
+                        <ImgMain src={Group1} onClick={handle}/>
+                        <ImgMain src={Group2} onClick={handle2}/>
+                        <ImgMain src={Group3} onClick={handleclicks}/>
                     </Det>
                 </MainDet>
                 <MainDet>

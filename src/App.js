@@ -21,6 +21,7 @@ import Success from './screens/Success/Success';
 import ClientHome from './screens/ClientHome/ClientHome';
 import Vieworders from './screens/ViewOrders/Vieworders';
 import Shipping from './screens/Shipping/Shipping';
+import Detail from './screens/Detail/Detail';
 
 function App() {
 
@@ -107,6 +108,10 @@ function App() {
                     <Route
                         path="/Shipping"
                         element={<Shipping />}
+                    />
+                    <Route
+                        path="/Detail"
+                        element={<Detail />}
                     />
                 </Routes>
             </Router>

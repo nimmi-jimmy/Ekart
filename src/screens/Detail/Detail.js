@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Main, Img, Text, Div, AccDiv, DivRow, BtnOver, About, Row } from './ClientHomeElements';
+import { Main, Img, Text, Div, AccDiv, DivRow, BtnOver, About, Row, MsgImg, DivRows, PhnText } from './DetailElements';
 import Button from '../../components/Button/Button';
 import ImgSrc from '../../images/Frame.png';
 import SubSrc from '../../images/Ellipse.png';
@@ -104,41 +104,30 @@ function handleEnter(id) {
 
 const navigation = useNavigate();
 const handleclicks = () => {
-  navigation('/Detail')
+  navigation('/Shipping')
 };
     
   return (
     <>
     <NavBar></NavBar>
-    <Main> 
-          
-        {
-            images.map((image, index) => (
-                <Div>                 
-                <Img src={image.src} key={index}/>
-                <AccDiv>
-                <DivRow>
-                <Text>{image.title}</Text>
-                </DivRow>
-                <DivRow>
-                <Text>{image.sub}</Text>
-
-                <DivRow onClick={() => [setVisible(!visible),handleEnter(image?.slno)]}>
-                <Row>{ visible ? <HeartFilled/> : <HeartOutlined /> }</Row>  
-                </DivRow>
-                </DivRow>
-               
-                </AccDiv>
-                <About>
-                    {image.about}
-                </About>
-                <BtnOver onClick={handleclicks}>
-                    <Text>Buy</Text>
-                </BtnOver>
-                </Div>    
-        ))}
-          
-    </Main>
+        <DivRow>
+            <Img src={ImgSrc} />
+            <Div>
+                <Text>Sobha city</Text>
+                <DivRows>
+                    <MsgImg src={SubSrc} />
+                    <PhnText>Anil Games</PhnText>
+                </DivRows>
+                <About>SOBHA offers a fabulous range of new flats, luxury apartments, and villa projects for sale in Thrissur, Kerala.</About>
+                <Row>
+                <DivRows>
+                    <Text>Price</Text>
+                    <Text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£12</Text>
+                </DivRows>
+                <Button title='Buy' onClick={handleclicks}/>
+                </Row>
+            </Div>
+        </DivRow>
     </>
   );
 };

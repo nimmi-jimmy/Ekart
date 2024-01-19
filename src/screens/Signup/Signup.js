@@ -92,7 +92,7 @@ const Sign = () => {
     password == '' && setApipassword(true);
     cpassword == '' && setApicpassword(true);
 
-    sendData && handle1();
+    name && handle1();
     // sendData ?
     // alert("Signup successful") 
     // &&

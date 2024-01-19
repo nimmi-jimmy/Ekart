@@ -9,6 +9,7 @@ import Group5 from '../../images/Group15.jpg';
 import Group6 from '../../images/Group16.jpg';
 import { useNavigate } from 'react-router-dom';
 import NavBar from '../../components/navbar/navbar';
+import NavBar2 from '../../components/navbar_photo/navbar2';
 
 const PhotoHome = () => {
   const navigation = useNavigate();
@@ -64,7 +65,7 @@ const PhotoHome = () => {
 
   return (
     <>
-<NavBar></NavBar>
+<NavBar2></NavBar2>
     <DivRow>
         <ProfileDiv>
         

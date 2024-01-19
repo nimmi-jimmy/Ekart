@@ -10,6 +10,7 @@ import Group4 from '../../images/Group-4.jpg';
 import Group5 from '../../images/Group-5.jpg';
 import Group6 from '../../images/Group-6.jpg';
 import "react-datepicker/dist/react-datepicker.css";
+import NavBar2 from '../../components/navbar_photo/navbar2';
 
 import { DeleteOutlined } from '@ant-design/icons';
 import NavBar from '../../components/navbar/navbar';
@@ -98,7 +99,7 @@ const Sell = () => {
 
   return (
     <>
-<NavBar></NavBar>
+<NavBar2></NavBar2>
     <DivRow>
         <ProfileDiv>
         <Div>

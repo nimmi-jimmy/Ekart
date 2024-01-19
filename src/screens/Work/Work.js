@@ -14,7 +14,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import { HeartOutlined, HeartFilled, EyeOutlined, CloseOutlined, DeleteOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-import NavBar from '../../components/navbar/navbar';
+import NavBar2 from '../../components/navbar_photo/navbar2';
 
 const Profiles = () => {
     const images = [
@@ -109,7 +109,7 @@ const Profiles = () => {
 
   return (
     <>
-<NavBar></NavBar>
+<NavBar2></NavBar2>
     <DivRow>
         <ProfileDiv>
         <Div>

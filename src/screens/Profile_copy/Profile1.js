@@ -295,7 +295,7 @@ const Profiles = () => {
                 <Text>{image.title}</Text>
                 </DivRow>
                 <DivRow>
-                <Text>{image.sub}</Text>
+                {/* <Text>{image.sub}</Text> */}
 
                 
                 <DivRow onClick={() => [setVisible(!visible),handleEnter(image?.slno)]}>
@@ -307,9 +307,9 @@ const Profiles = () => {
                 <About>
                     {image.about}
                 </About>
-                <BtnOver onClick={handleclicks}>
+                {/* <BtnOver onClick={handleclicks}>
                     <Text>Buy</Text>
-                </BtnOver>
+                </BtnOver> */}
                 </Div>  
                    
             ))}

@@ -17,12 +17,12 @@
 import React from 'react';
 import { Nav, Arr, NavBtn, Drop, PhnText, Logo, NavBtnLink, NavMenu, Input } from './navbarelements';
 import LogoSrc from '../../images/logo.png';
-import Profile from '../../images/Ellipse.png';
+import Profile from '../../images/Ellipse3.png';
 import Arrow from '../../images/Vector.png';
 import { LoginOutlined, LogoutOutlined, SearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
-const NavBar1 = () => {
+const NavBar = () => {
 
   const handleOpen = () => {
     setOpen(!open);
@@ -40,14 +40,12 @@ const NavBar1 = () => {
     // do something
     setOpen(false);
     setValue("Photograper");
+    
   };
   const navigation = useNavigate();
  
   const handle = () => {
     navigation('/Signin')
-  };
-  const handle1 = () => {
-    navigation('/Signup')
   };
   return (
     <>
@@ -55,27 +53,26 @@ const NavBar1 = () => {
           <Logo src={LogoSrc}/>
 
           <NavBtnLink>
-              {/* <Input placeholder='Search'/><SearchOutlined /> */}
+              <Input placeholder='Search'/><SearchOutlined />
               <NavBtnLink>
-                <NavMenu onClick={handle}>Sign In</NavMenu>
-                <NavMenu onClick={handle1}>Sign Up</NavMenu>
-              {/* <NavBtn>
+                <NavMenu>Akhil</NavMenu>
+              <NavBtn>
                  <Logo src={Profile}/>
               </NavBtn>  
-              <Arr src={Arrow} onClick={handleOpen}/> */}
+              <Arr src={Arrow} onClick={handleOpen}/>
               </NavBtnLink>
           </NavBtnLink> 
         </Nav>
         {open ? (
           <Drop>
-            <div onClick={handle}>
+            {/* <div onClick={handle}>
               <PhnText onClick={handleMenuOne}><LoginOutlined /> Sign In</PhnText>
-            </div>
-            <PhnText onClick={handleMenuTwo}><LogoutOutlined /> Sign Out</PhnText>
+            </div> */}
+            <PhnText onClick={handle}><LogoutOutlined /> Sign Out</PhnText>
           </Drop>
         ) : null}
     </>
   );
 };
 
-export default NavBar1;
+export default NavBar;
