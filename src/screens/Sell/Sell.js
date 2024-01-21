@@ -17,75 +17,66 @@ import NavBar from '../../components/navbar/navbar';
 
 const Sell = () => {
     const images = [
-          {
-            slno: 2,
-            time: '10:00-12:00PM',
-            src: Group1,
-            subsrc: SubSrc,   
-            title: 'Lorem Ipsum',
-            sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-       
-          },
-          {
-            slno: 3,
-            time: '12:00-02:00PM',
-            src: Group2,  
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '40$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        
-          },
-          {
-            slno: 4,
-            time: '02:00-04:00PM',
-            src: Group3,   
-            subsrc: SubSrc,  
-            title: 'Lorem Ipsum',
-            sub: '51$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      {
+        slno: 2,
+        time: '10:00-12:00PM',
+        src: Group1,
+        subsrc: SubSrc,   
+        title: 'Sun on Sea',
+        sub: '£20',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+   
+      },
+      {
+        slno: 3,
+        time: '12:00-02:00PM',
+        src: Group2,  
+        subsrc: SubSrc,
+        title: 'Sea Turtle',
+        sub: '£30',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    
+      },
+      {
+        slno: 4,
+        time: '02:00-04:00PM',
+        src: Group3,   
+        subsrc: SubSrc,  
+        title: 'Fancy Hens',
+        sub: '£25',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+ 
+      },
+      {
+        slno: 5,
+        time: '04:00-06:00PM',
+        src: Group4,  
+        subsrc: SubSrc,
+        title: 'Elephant at Lake Victoria',
+        sub: '£34',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    
+      },
+      {
+        slno: 5,
+        time: '06:00-08:00PM',
+        src: Group5,
+        subsrc: SubSrc,
+        title: 'Squirrel Invasion',
+        sub: '£45',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
      
-          },
-          {
-            slno: 5,
-            time: '04:00-06:00PM',
-            src: Group4,  
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '30$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        
-          },
-          {
-            slno: 5,
-            time: '06:00-08:00PM',
-            src: Group5,
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-         
-          },
-          {
-            slno: 7,
-            time: '08:00-10:00PM',
-            src: Group6,
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '10$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-          
-          },
-          {
-            slno: 8,
-            time: '10:00-12:00AM',
-            src: ImgSrc,
-            subsrc: SubSrc,
-            title: 'Lorem Ipsum',
-            sub: '60$',
-            about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-          },
+      },
+      {
+        slno: 7,
+        time: '08:00-10:00PM',
+        src: Group6,
+        subsrc: SubSrc,
+        title: 'Water in hands',
+        sub: '£22',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      
+      },
     ]
     const [visible, setVisible] = useState("");
 

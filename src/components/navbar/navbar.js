@@ -47,13 +47,17 @@ const NavBar = () => {
   const handle = () => {
     navigation('/Signin')
   };
+  const handle1 = () => {
+    navigation('/Profile')
+  };
   return (
     <>
         <Nav>
           <Logo src={LogoSrc}/>
 
           <NavBtnLink>
-              <Input placeholder='Search'/><SearchOutlined />
+              <Input placeholder='Search'/>
+              <div style={{marginLeft: "-40px", marginRight: "20px", marginTop: "20px"}} onClick={handle1}><SearchOutlined /></div>
               <NavBtnLink>
                 <NavMenu>George</NavMenu>
               <NavBtn>

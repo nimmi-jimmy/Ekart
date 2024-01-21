@@ -162,8 +162,37 @@ const Profiles = () => {
   const handleclick = () => {
     navigation('/Chat')
   };
-  const handleclicks = () => {
-    navigation('/Shipping')
+  const [active, setActive] = useState(false);
+  const handleClick = () => {
+    setActive(!active);
+  };
+  const [active1, setActive1] = useState(false);
+  const handleClick1 = () => {
+    setActive1(!active1);
+  };
+  const [active2, setActive2] = useState(false);
+  const handleClick2 = () => {
+    setActive2(!active2);
+  };
+  const [active3, setActive3] = useState(false);
+  const handleClick3 = () => {
+    setActive3(!active3);
+  };
+  const [active4, setActive4] = useState(false);
+  const handleClick4 = () => {
+    setActive4(!active4);
+  };
+  const [active5, setActive5] = useState(false);
+  const handleClick5 = () => {
+    setActive5(!active5);
+  };
+  const [active6, setActive6] = useState(false);
+  const handleClick6 = () => {
+    setActive6(!active6);
+  };
+  const [active7, setActive7] = useState(false);
+  const handleClick7 = () => {
+    setActive7(!active7);
   };
   return (
     <>
@@ -229,11 +258,40 @@ const Profiles = () => {
                     </DivRows>
 
                     <MainTime>
-                    {images.map((image, index) => (
-                    <BtnTime>
-                        <PhnText>{image.time}</PhnText>
+                    {/* {images.map((image, index) => ( */}
+                    <BtnTime onClick={handleClick}
+                    style={{ borderColor: active ? "black" : "#dddddd" }}>
+                        <PhnText>08:00-10:00AM</PhnText>
                     </BtnTime>
-                    ))}
+                    <BtnTime onClick={handleClick1}
+                    style={{ borderColor: active1 ? "black" : "#dddddd" }}>
+                        <PhnText>10:00-12:00PM</PhnText>
+                    </BtnTime>
+                    <BtnTime onClick={handleClick2}
+                    style={{ borderColor: active2 ? "black" : "#dddddd" }}>
+                        <PhnText>12:00-02:00PM</PhnText>
+                    </BtnTime>
+                    <BtnTime onClick={handleClick3}
+                    style={{ borderColor: active3 ? "black" : "#dddddd" }}>
+                        <PhnText>02:00-04:00PM</PhnText>
+                    </BtnTime>
+                    <BtnTime onClick={handleClick4}
+                    style={{ borderColor: active4 ? "black" : "#dddddd" }}>
+                        <PhnText>04:00-06:00PM</PhnText>
+                    </BtnTime>
+                    <BtnTime onClick={handleClick5}
+                    style={{ borderColor: active5 ? "black" : "#dddddd" }}>
+                        <PhnText>06:00-08:00PM</PhnText>
+                    </BtnTime>
+                    <BtnTime onClick={handleClick6}
+                    style={{ borderColor: active6 ? "black" : "#dddddd" }}>
+                        <PhnText>08:00-10:00PM</PhnText>
+                    </BtnTime>
+                    <BtnTime onClick={handleClick7}
+                    style={{ borderColor: active7 ? "black" : "#dddddd" }}>
+                        <PhnText>10:00-12:00AM</PhnText>
+                    </BtnTime>
+                    {/* ))} */}
                     </MainTime>
 
                     <PhnText style={{fontWeight: 'bold'}}>What do you need to shoot?</PhnText>

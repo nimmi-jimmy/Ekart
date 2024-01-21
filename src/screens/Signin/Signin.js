@@ -29,7 +29,7 @@ const Signin = () => {
     email == '' && setApiemail(true);
     password == '' && setApipassword(true);
 
-    email == 'george@gmail.com' ? navigation('/Profile')
+    email == 'george@gmail.com' ? navigation('/ClientHome')
     : email && password && navigation('/PhotoHome')
   };
 
